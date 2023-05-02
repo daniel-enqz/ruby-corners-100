@@ -30,3 +30,6 @@ end
 message.type # => "stats"
 10 handle_message(message) # Uh oh!
 ```
+
+`raise` syntax:
+`raise [EXCEPTION_CLASS], [MESSAGE], [BACKTRACE]`
