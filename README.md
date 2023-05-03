@@ -205,7 +205,7 @@ end
 
 warn "Uh oh"
 
-Output
--:3:in ‘warn’: Uh oh (RuntimeError)
-from -:7
+# Output
+# -:3:in ‘warn’: Uh oh (RuntimeError)
+# from -:7
 ```
