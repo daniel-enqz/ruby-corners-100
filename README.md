@@ -33,3 +33,26 @@ message.type # => "stats"
 
 `raise` syntax:
 `raise [EXCEPTION_CLASS], [MESSAGE], [BACKTRACE]`
+
+<br>
+When calling rescue consider the following:
+
+```ruby
+rescue
+# ...
+end
+
+#. . . is equivalent to:
+rescue StandardError
+# ...
+end
+```
+
+There is a fairly long list of built-in exception types that a bare rescue will
+not capture, including (but not limited to):
+• NoMemoryError
+• LoadError
+• NotImplementedError
+• SignalException
+• Interrupt
+• ScriptError
