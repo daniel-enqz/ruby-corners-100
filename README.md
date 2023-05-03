@@ -226,3 +226,7 @@ rescue Exception => error
   logger.error error.backtrace.join("\n")
 end
 ```
+
+Where to put bulkheads:
+• External services
+• External processes
