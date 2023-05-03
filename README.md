@@ -211,6 +211,12 @@ warn "Uh oh"
 ```
 
 # Avoiding Bulkheads
+
+Where to put bulkheads:
+
+- External services
+- External processes
+
 One way to avoid failure cascades is to erect bulkheads in your system.
 A bulkhead (or “barricade”, depending on who is describing it) is a wall
 beyond which failures cannot have an effect on other parts of the system. A
@@ -226,7 +232,3 @@ rescue Exception => error
   logger.error error.backtrace.join("\n")
 end
 ```
-
-Where to put bulkheads:
-• External services
-• External processes
