@@ -5,13 +5,9 @@ Took inspiration from: [Exceptional Ruby by Avdi Grimn](https://drive.google.com
 
 ---
 
-A method’s contract states “given the following inputs, I promise to return
-
-certain outputs and/or cause certain side-effects”. It is the callers respon-
-sibility to ensure that the method’s preconditions—the inputs it depends
-
-on—are met. It is the method’s responsibility to ensure that its postcondi-
-tions—those outputs and side-effects—are fulfilled.
+A method’s contract states “given the following inputs, I promise to return certain outputs and/or cause certain side-effects”. 
+It is the callers responsibility to ensure that the method’s preconditions the inputs it depends on—are met. 
+It is the method’s responsibility to ensure that its postconditions of those outputs and side-effects—are fulfilled.
 
 ---
 
@@ -25,7 +21,7 @@ def handle_message(message)
   if message.type == "success"
 handle_success(message)
   else
-5 handle_failure(message)
+handle_failure(message)
   end
 end
 
@@ -51,13 +47,14 @@ end
 ```
 
 There is a fairly long list of built-in exception types that a bare rescue will
-not capture, including (but not limited to):
-• NoMemoryError
-• LoadError
-• NotImplementedError
-• SignalException
-• Interrupt
-• ScriptError
+not capture, including (but not limited to):<br>
+
+• NoMemoryError<br>
+• LoadError<br>
+• NotImplementedError<br>
+• SignalException<br>
+• Interrupt<br>
+• ScriptError<br>
 
 ### More about rescue:
 
@@ -151,13 +148,9 @@ foo{ "No error" }
 
 ### About exit handlers
 
-This fact is useful to us. Let’s say we wanted to log all fatal exception-
-induced crashes. Let’s say, further, that our code is running in a context
-
-where it is difficult or impossible to wrap the entire program in a begin . . .
-rescue . . . end block. (E.g. a web application server running on hosted
-server that we don’t control). We can still “catch” Exceptions before the
-program exits using hooks.
+This fact is useful to us. Let’s say we wanted to log all fatal exception-induced crashes. Let’s say, further, that our code is running in a context where it is difficult or impossible to wrap the entire program in a begin...
+rescue... end block. (E.g. a web application server running on hosted server that we don’t control). 
+We can still “catch” Exceptions before the program exits using hooks.
 Here’s a simple crash logger implemented with at_exit:
 
 ```ruby
@@ -179,3 +172,40 @@ end
 ```
 
 # RESPONDING TO FALIURES
+> If a faliure isn't a major one, consider adding a nil value in rescue block:
+
+```ruby
+  def save
+    # ...
+  rescue
+    nil
+  end
+```
+> Returning bengin value:
+
+```ruby
+begin
+  response = HTTP.get_response(url)
+  JSON.parse(response.body)
+rescue Net::HTTPError
+  {"stock_quote" => "<Unavailable>"}
+end
+```
+  
+> Consider using warn, and make them all exceptions:
+
+ ```ruby
+ if Rails.env.development?
+  module Kernel
+    def warn(message)
+      raise message
+    end
+  end
+end
+
+warn "Uh oh"
+
+Output
+-:3:in ‘warn’: Uh oh (RuntimeError)
+from -:7
+```
