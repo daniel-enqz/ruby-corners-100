@@ -15,6 +15,8 @@ tions—those outputs and side-effects—are fulfilled.
 
 ---
 
+# EXCEPTIONS LIFECYCLE
+
 _"Whatever the reason for the failure, a robust Ruby program needs to have
 a coherent plan in place for handling exceptional conditions"_
 
@@ -116,3 +118,64 @@ end
 # Didn’t work
 # I give up
 ```
+
+### About else
+
+else after a rescue clause is the opposite of rescue; where the rescue
+clause is only hit when an exception is raised, else is only hit when no
+exception is raised by the preceding code block.
+
+```ruby
+def foo
+  yield
+rescue
+  puts "Only on error"
+else
+  puts "Only on success"
+ensure
+  puts "Always executed"
+end
+
+foo{ raise "Error" }
+puts "---"
+foo{ "No error" }
+
+# Output
+
+# Only on error
+# Always executed
+# ---
+# Only on success
+# Always executed
+```
+
+### About exit handlers
+
+This fact is useful to us. Let’s say we wanted to log all fatal exception-
+induced crashes. Let’s say, further, that our code is running in a context
+
+where it is difficult or impossible to wrap the entire program in a begin . . .
+rescue . . . end block. (E.g. a web application server running on hosted
+server that we don’t control). We can still “catch” Exceptions before the
+program exits using hooks.
+Here’s a simple crash logger implemented with at_exit:
+
+```ruby
+at_exit do
+  if $!
+    open(’crash.log’, ’a’) do |log|
+      error = {
+        :timestamp => Time.now,
+        :message => $!.message,
+        :backtrace => $!.backtrace,
+        :gems => Gem.loaded_specs.inject({}){
+          |m, (n,s)| m.merge(n => s.version)
+          }
+        }
+      YAML.dump(error, log)
+    end
+  end
+end
+```
+
+# RESPONDING TO FALIURES
