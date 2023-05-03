@@ -47,13 +47,14 @@ end
 ```
 
 There is a fairly long list of built-in exception types that a bare rescue will
-not capture, including (but not limited to):
-• NoMemoryError
-• LoadError
-• NotImplementedError
-• SignalException
-• Interrupt
-• ScriptError
+not capture, including (but not limited to):<br>
+
+• NoMemoryError<br>
+• LoadError<br>
+• NotImplementedError<br>
+• SignalException<br>
+• Interrupt<br>
+• ScriptError<br>
 
 ### More about rescue:
 
