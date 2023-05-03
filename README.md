@@ -182,7 +182,6 @@ end
   end
 ```
 > Returning bengin value:
-```
 
 ```ruby
 begin
@@ -194,6 +193,7 @@ end
 ```
   
 > Consider using warn, and make them all exceptions:
+
  ```ruby
  if Rails.env.development?
   module Kernel
