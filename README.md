@@ -184,11 +184,28 @@ end
 > Returning bengin value:
 ```
 
-```
+```ruby
 begin
   response = HTTP.get_response(url)
   JSON.parse(response.body)
 rescue Net::HTTPError
   {"stock_quote" => "<Unavailable>"}
 end
+```
+  
+> Consider using warn, and make them all exceptions:
+ ```ruby
+ if Rails.env.development?
+  module Kernel
+    def warn(message)
+      raise message
+    end
+  end
+end
+
+warn "Uh oh"
+
+Output
+-:3:in ‘warn’: Uh oh (RuntimeError)
+from -:7
 ```
