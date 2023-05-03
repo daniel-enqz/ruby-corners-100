@@ -6,6 +6,4 @@ def test_faliure
   end
 end
 
-puts test_faliure
-
-
+test_faliure
