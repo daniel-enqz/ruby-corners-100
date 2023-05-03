@@ -56,3 +56,63 @@ not capture, including (but not limited to):
 • SignalException
 • Interrupt
 • ScriptError
+
+### More about rescue:
+
+```ruby
+def errors_matching(&block)
+  m = Module.new
+  (class << m; self; end).instance_eval do
+    define_method(:===, &block)
+  end
+  m
+end
+
+class RetryableError < StandardError
+  attr_reader :num_tries
+
+  def initialize(message, num_tries)
+    @num_tries = num_tries
+    super("#{message} (##{num_tries})")
+  end
+end
+
+puts "About to raise"
+begin
+  raise RetryableError.new("Connection timeout", 2)
+rescue errors_matching{|e| e.num_tries < 3} => e
+  puts "Ignoring #{e.message}"
+end
+puts "Continuing..."
+
+```
+
+### About "Retry" in ruby
+
+In the next example tries gets inremented by one feore trying, then te rescue block
+evaluates if it will run begin again.
+
+The exception "raise" is being caught and handled by the "rescue" block, and the program flow continues executing from the "retry" statement.
+
+```ruby
+tries = 0
+begin
+  tries += 1
+  puts "Trying #{tries}..."
+  raise "Didn’t work"
+rescue
+  puts e.message
+  retry if tries < 3
+  puts "I give up"
+end
+
+# Output
+
+# Trying 1...
+# Didn’t work
+# Trying 2...
+# Didn’t work
+# Trying 3...
+# Didn’t work
+# I give up
+```
