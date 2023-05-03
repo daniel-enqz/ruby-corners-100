@@ -209,3 +209,20 @@ warn "Uh oh"
 # -:3:in ‘warn’: Uh oh (RuntimeError)
 # from -:7
 ```
+
+# Avoiding Bulkheads
+One way to avoid failure cascades is to erect bulkheads in your system.
+A bulkhead (or “barricade”, depending on who is describing it) is a wall
+beyond which failures cannot have an effect on other parts of the system. A
+simple example of a bulkhead is a rescue block that catches all Exceptions
+and writes them to a log:
+
+```ruby
+begin
+  SomeExternalService.some_request
+rescue Exception => error
+  logger.error "Exception intercepted calling SomeExternalService"
+  logger.error error.message
+  logger.error error.backtrace.join("\n")
+end
+```
