@@ -148,13 +148,9 @@ foo{ "No error" }
 
 ### About exit handlers
 
-This fact is useful to us. Let’s say we wanted to log all fatal exception-
-induced crashes. Let’s say, further, that our code is running in a context
-
-where it is difficult or impossible to wrap the entire program in a begin . . .
-rescue . . . end block. (E.g. a web application server running on hosted
-server that we don’t control). We can still “catch” Exceptions before the
-program exits using hooks.
+This fact is useful to us. Let’s say we wanted to log all fatal exception-induced crashes. Let’s say, further, that our code is running in a context where it is difficult or impossible to wrap the entire program in a begin...
+rescue... end block. (E.g. a web application server running on hosted server that we don’t control). 
+We can still “catch” Exceptions before the program exits using hooks.
 Here’s a simple crash logger implemented with at_exit:
 
 ```ruby
