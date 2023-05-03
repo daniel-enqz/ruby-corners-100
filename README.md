@@ -172,3 +172,12 @@ end
 ```
 
 # RESPONDING TO FALIURES
+> If a faliure isn't a major one, consider adding a nil value in rescue block:
+
+```
+  def save
+    # ...
+  rescue
+    nil
+  end
+```
