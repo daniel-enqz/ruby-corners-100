@@ -181,3 +181,14 @@ end
     nil
   end
 ```
+> Returning bengin value:
+```
+
+```
+begin
+  response = HTTP.get_response(url)
+  JSON.parse(response.body)
+rescue Net::HTTPError
+  {"stock_quote" => "<Unavailable>"}
+end
+```
