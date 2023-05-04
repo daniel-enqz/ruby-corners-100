@@ -15,10 +15,9 @@ A method’s contract states “given the following inputs, I promise to return 
 
 - Jared Carroll wrote a great blog post14 about this point back in 2007, in which he puts it this way:
 > When writing an application you expect invalid input from users.
-> Since we expect invalid input we should NOT be handling it
+> Since we expect invalid input we should NOT be handling it via exceptions because exceptions should only be used for unexpected situations.
 
-via exceptions because exceptions should only be used for un-
-expected situations.
+Consider using `throw`or `catch`.
 
 # EXCEPTIONS LIFECYCLE
 
