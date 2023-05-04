@@ -9,6 +9,7 @@ A method’s contract states “given the following inputs, I promise to return 
 
 ---
 
+# WHEN TO USE EXCEPTIONS
 > Use exceptions only for exceptional situations. [. . . ] Exceptions are often overused. 
 > Because they distort the flow of control, they can lead to convoluted constructions that are prone to bugs. 
 > It is hardly exceptional to fail to open a file; generating an exception in this case strikes us as over-engineering.
@@ -17,7 +18,20 @@ A method’s contract states “given the following inputs, I promise to return 
 > When writing an application you expect invalid input from users.
 > Since we expect invalid input we should NOT be handling it via exceptions because exceptions should only be used for unexpected situations.
 
-Consider using `throw`or `catch`.
+1.- Consider using `throw`or `catch`.
+2.- Sometimes, the caller should be the one to handle the exception rather than the callee. 👇👇👇
+
+A similar example is the #detect method on Enumerable. Since the block
+was already taken, #detect uses a parameter for its caller-specified fallback
+handler.
+
+```ruby 
+arr.detect(lambda{"None found"}) {|x| ... }
+```
+
+This is a terrifically useful idiom to use in your own methods. Whenever
+you’re not sure if a certain case constitutes an exception, consider whether
+you can delegate the decision to the caller in some way.
 
 # EXCEPTIONS LIFECYCLE
 
