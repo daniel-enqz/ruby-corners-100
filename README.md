@@ -6,8 +6,6 @@ Took inspiration from: [Exceptional Ruby by Avdi Grimn](https://drive.google.com
 ---
 
 A method’s contract states “given the following inputs, I promise to return certain outputs and/or cause certain side-effects”. 
-It is the callers responsibility to ensure that the method’s preconditions the inputs it depends on—are met. 
-It is the method’s responsibility to ensure that its postconditions of those outputs and side-effects—are fulfilled.
 
 ---
 
