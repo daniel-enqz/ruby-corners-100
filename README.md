@@ -326,3 +326,47 @@ if p.problems.size > 0
   handle errors
 end
 ```
+
+# Having Libraries to handle this errors:
+
+There are three different types of errors:
+
+1. User Error. The user did something invalid or not allowed. Usually
+handled by notifying the user and giving them an opportunity to fix the
+problem.
+
+2. Logic Error. There is an error in the system. Typically handled by no-
+tifying the system administrator and/or development team, and letting the user know that the problem is being looked into.
+
+3. Transient Failure. Something is over capacity or temporarily offline.
+Usually handled by giving the user a hint about when to come back
+and try again, or, in the case of batch jobs, by arranging to re-try the
+failed operation a little later.
+
+```
+failures = 0
+begin
+  # ...
+rescue MyLib::UserError => e
+  puts e.message
+  puts "Please try again"
+  retry
+rescue MyLib::TransientFailure => e
+  failures += 1
+  if failures < 3
+    warn e.message
+    sleep 10
+    retry
+  else
+    abort "Too many failures"
+   end
+rescue MyLib::LogicError => e
+  log_error(e)
+  abort "Internal
+end
+```
+
+When building a library, you may find it useful to break LogicError into two
+subclasses:
+1. InternalError, for errors (bugs) in the library itself; and
+2. ClientError, for incorrect use of the library.
