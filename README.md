@@ -1,4 +1,4 @@
-# Ruby Tutorial
+# Ruby Corners 💯
 
 The purpose of this repo is to add relevant ruby and ruby on rails tutorials and code snippets.
 In order to understand teh corners of both enviorments better and to be able to use them more effectively.
