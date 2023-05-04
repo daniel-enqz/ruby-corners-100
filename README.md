@@ -60,6 +60,20 @@ render_user(u){ "UNNAMED USER" }
 # Fall back to an exception:
 render_user(u){ raise "User missing a name" }
 ```
+
+### Remember to use Ruby implicit begin blocks...
+In this case, the “better way” is to use Ruby’s implicit begin blocks. Every
+method in Ruby is implicitly a begin block. We can put a rescue clause at
+the end of the method and omit the begin and the extra end:
+
+```ruby
+def foo
+  # mainline logic goes here
+  rescue # -------------------
+  # failure handling goes here
+end
+```
+
 # EXCEPTIONS LIFECYCLE
 
 _"Whatever the reason for the failure, a robust Ruby program needs to have
