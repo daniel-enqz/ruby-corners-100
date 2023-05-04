@@ -31,13 +31,13 @@ arr.detect(lambda{"None found"}) {|x| ... }
 3.- Ask yourself if the failure really justifies terminating the program.
 
 For example, this...
-```
+```ruby 
 @ug = UserGreeting.find_by_name!("winter_holidays")
 ```
 
 ...could become this:
 
-```
+```ruby 
 @ug = UserGreeting.find_by_name("winter_holidays")
 unless @ug
 logger.error "Someone forgot to run db:populate!"
