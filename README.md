@@ -232,31 +232,10 @@ rescue Exception => error
   logger.error error.backtrace.join("\n")
 end
 ```
+# About ending the program
+Calling "exit" when some situations are severe. We are actually rising an exception here: "SystemExit"
+![Screenshot 2023-05-03 at 17 59 58](https://user-images.githubusercontent.com/72522628/236076076-c93d8b0e-3315-45a9-9ab6-e247ccfcb381.jpg)
+
 
 # About the circut breaker pattern
-The Circuit Breaker pattern
 
-Another way to mitigate failure cascade situations is to build Circuit Break-
-ers into your apps.
-
-Circuit Breaker is a pattern described in Micheal Nygard’s book Release It!.
-
-It describes a mechanism that controls the operation of a software subsys-
-tem and behaves similarly to a physical circuit breaker. The mechanism has
-
-three states:
-When the breaker is Closed, the subsystem is allowed to operate normally.
-However, a counter tracks the number of failures that have occurred. When
-the number exceeds a threshold, the breaker trips, and enters the open
-state. In this state, the subsystem is not permitted to operate.
-
-After either a timeout elapses or (depending on the implementation) a hu-
-man intervenes and resets the breaker, it enters the half-open state. In this
-
-state the subsystem is on probation: it can run, but a single failure will send
-it back into the “open” state.
-By detecting unusually frequent failures, and preventing the subsystem
-from endlessly repeating a failing operation, the Circuit Breaker pattern
-eliminates a common cause of failure cascades.
-If you are interested in exploring the use of Circuit Breakers in your code,
-Will Sargent has
