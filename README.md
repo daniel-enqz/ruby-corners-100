@@ -33,6 +33,23 @@ This is a terrifically useful idiom to use in your own methods. Whenever
 you’re not sure if a certain case constitutes an exception, consider whether
 you can delegate the decision to the caller in some way.
 
+### Another cool example:
+
+```ruby
+def render_user(user)
+  if user.fname && user.lname
+    "#{user.lname}, #{user.fname}"
+  else
+    yield
+  end
+end
+
+# Fall back to a benign placeholder value:
+render_user(u){ "UNNAMED USER" }
+
+# Fall back to an exception:
+render_user(u){ raise "User missing a name" }
+```
 # EXCEPTIONS LIFECYCLE
 
 _"Whatever the reason for the failure, a robust Ruby program needs to have
