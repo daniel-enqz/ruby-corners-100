@@ -13,6 +13,13 @@ A method’s contract states “given the following inputs, I promise to return 
 > Because they distort the flow of control, they can lead to convoluted constructions that are prone to bugs. 
 > It is hardly exceptional to fail to open a file; generating an exception in this case strikes us as over-engineering.
 
+- Jared Carroll wrote a great blog post14 about this point back in 2007, in which he puts it this way:
+> When writing an application you expect invalid input from users.
+> Since we expect invalid input we should NOT be handling it
+
+via exceptions because exceptions should only be used for un-
+expected situations.
+
 # EXCEPTIONS LIFECYCLE
 
 _"Whatever the reason for the failure, a robust Ruby program needs to have
