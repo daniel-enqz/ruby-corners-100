@@ -18,7 +18,7 @@ A method’s contract states “given the following inputs, I promise to return 
 > When writing an application you expect invalid input from users.
 > Since we expect invalid input we should NOT be handling it via exceptions because exceptions should only be used for unexpected situations.
 
-1.- Consider using `throw`or `catch`.
+1.- Consider using `throw`or `catch`. <br>
 2.- Sometimes, the caller should be the one to handle the exception rather than the callee. 👇👇👇
 
 A similar example is the #detect method on Enumerable. Since the block
@@ -28,11 +28,21 @@ handler.
 ```ruby 
 arr.detect(lambda{"None found"}) {|x| ... }
 ```
+3.- Ask yourself if the failure really justifies terminating the program.
 
-This is a terrifically useful idiom to use in your own methods. Whenever
-you’re not sure if a certain case constitutes an exception, consider whether
-you can delegate the decision to the caller in some way.
+For example, this...
+```
+@ug = UserGreeting.find_by_name!("winter_holidays")
+```
 
+...could become this:
+
+```
+@ug = UserGreeting.find_by_name("winter_holidays")
+unless @ug
+logger.error "Someone forgot to run db:populate!"
+@ug = OpenStruct.new(:welcome
+```
 ### Another cool example:
 
 ```ruby
