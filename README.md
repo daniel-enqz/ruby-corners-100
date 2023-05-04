@@ -343,7 +343,7 @@ Usually handled by giving the user a hint about when to come back
 and try again, or, in the case of batch jobs, by arranging to re-try the
 failed operation a little later.
 
-```
+```ruby
 failures = 0
 begin
   # ...
