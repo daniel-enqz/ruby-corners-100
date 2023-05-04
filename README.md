@@ -9,6 +9,10 @@ A method’s contract states “given the following inputs, I promise to return 
 
 ---
 
+> Use exceptions only for exceptional situations. [. . . ] Exceptions are often overused. 
+> Because they distort the flow of control, they can lead to convoluted constructions that are prone to bugs. 
+> It is hardly exceptional to fail to open a file; generating an exception in this case strikes us as over-engineering.
+
 # EXCEPTIONS LIFECYCLE
 
 _"Whatever the reason for the failure, a robust Ruby program needs to have
