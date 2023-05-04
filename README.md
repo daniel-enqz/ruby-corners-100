@@ -239,3 +239,25 @@ Calling "exit" when some situations are severe. We are actually rising an except
 - Closed state: In the normal state, when the circuit breaker is closed, all requests are allowed to pass through to the service. The Circuit Breaker keeps track of the number of failures and their frequency. If the failure rate surpasses a predefined threshold, the Circuit Breaker "trips" and moves to the open state.
 - Open state: When the Circuit Breaker is in the open state, it blocks all requests to the service. This prevents further load on the failing service and allows it to recover. After a predefined timeout period, the Circuit Breaker moves to the half-open state to check if the service has recovered.
 - Half-open state: In this state, the Circuit Breaker allows a limited number of requests to pass through to the service to test its availability. If the service responds successfully to these requests, the Circuit Breaker assumes that the service has recovered, and it moves back to the closed state, allowing all requests to pass through again. If the service is still experiencing failures, the Circuit Breaker goes back to the open state and continues to block requests.
+
+### Different ways of handling errors:
+```ruby
+class Provisionment
+  attr_reader :problems
+  
+  def initialize
+    @problems = []
+  end
+  
+  def perform
+    @problems << "Failure downloading key file..."
+  end
+end
+
+p = Provisionment.new
+p.perform
+
+if p.problems.size > 0
+  handle errors
+end
+```
