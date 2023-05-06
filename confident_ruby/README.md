@@ -17,7 +17,7 @@ I believe that if we take a look at any given line of code in a method, we can n
 For intsance, lets take a look at the next example which actually looks everwhelming, its not ordered.....🤔
 ![Screenshot 2023-05-05 at 18 02 24](https://user-images.githubusercontent.com/72522628/236586862-eb9a587f-8b8b-4608-94de-1b99442b3fa2.jpg)
 
-## So how do we can create readble code and as tell a story with our methods?
+## So how can we create readable code and tell a story with our methods?
 
 > Let's start by defining "Performing the work", which is basically the core of every method.
 
@@ -32,9 +32,27 @@ Identified message:
 
 2. We must identify the roles which correspond to those messages.
 
-| Message  | Receiver Role | 
-| #get_product | product_inventory |
+| Message       | Receiver Role     |
+|---------------|-------------------|
+| #get_product  | product_inventory |
+| #email_address, #product_id | purchase_record |
+
+So we can rewrite this is step as:
+`Use the purchase_record.product_id to product_inventory.get_product.
 
 
 4. We must ensure the method's logic receives objects which can play those
 roles.
+
+NOTE: The step we describe above is just one of the multiple ones we see in the next method. But this covers our first step.
+```ruby
+def import_legacy_purchase_data(data)
+  purchase_list = legacy_data_parser.parse_purchase_records(data) purchase_list.each do |purchase_record|
+       customer = customer_list.get_customer(purchase_record.email_address)
+       product  = product_inventory.get_product(purchase_record.product_id)
+       customer.add_purchased_product(product)
+       customer.notify_of_files_available(product)
+       log_successful_import(purchase_record)
+  end 
+end
+```
