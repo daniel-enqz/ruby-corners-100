@@ -41,3 +41,7 @@ Collecting input isn't just about finding needed inputs—it's about determining
 ### The goal is mapping the roles we need with the objects we have in our system.
 I added more info in [this file](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby/lib/inputs.md), please check it to undertsand this step better 👌
 
+# Whow can we do a better input collection.
+1.- Be sure to use built-in conversion protocols (#to_str, #to_i, #to_path, or #to_ary.)
+
+
