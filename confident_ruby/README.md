@@ -1,11 +1,14 @@
-# Ruby is designed to make programmers happy.
-– Yukhiro "Matz" Matsumoto
+# Writing clean code in ruby
 
-The next insights about writing clean and understable code in ruby is insipred by the book:
-Confindent Ruby by Avdi Grimm.
+> Ruby is designed to make programmers happy.
+> - Yukhiro "Matz" Matsumoto
+
+--- 
+The next insights are insipred by the book:
+Confindent Ruby by Avdi Grimm. 
+---
 
 > A single method is like a page in that story. And unfortunately, a lot of methods are just as convoluted, equivocal, and confusing as that made-up page above.
-
 
 I believe that if we take a look at any given line of code in a method, we can nearly always categorize it as serving one of the following roles:
 
@@ -20,56 +23,77 @@ For intsance, lets take a look at the next example which actually looks everwhel
 
 ## So how can we create readable code and tell a story with our methods?
 
+#### 1. Performing the work:
 > Let's start by defining "Performing the work", which is basically the core of every method.
 
-#### Point 1: Sending the message:
+**We need 3 essential steps to achieve this**:
 1. Identifying the messages we want to send (in language as close to that of the problem domain as possible); then...
 2. Determining the roles which make sense to receive those messages; and finally...
 3. Bridging the gap between the roles we've identified and the objects which actually exist in the system.
 
-I added an example in this file, please check it to undertsand this step better 👌
+I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby/lib), please check it to undertsand this step better 👌
 
-**Feature:** Write a method which handles imports of CSV data from the old system to the new system.
+#### 2. Collecting input:
+> Now that we know how the core system of our methods can be structured, lets take a look at the actual first step of our list.
 
-_NOTE: The next is a example of how can cover identfy the message out of a list of pseudocode to complete a feature._
+Collecting input isn't just about finding needed inputs—it's about determining how lenient to be in accepting many types of input, and about whether to adapt the method's logic to suit the received collaborator types, or vice-versa.
 
-PSEUDOCODE:
-1. Parse the purchase records from the CSV contained in a provided IO object.
-2. For each purchase record, use the record's email address to get the associated customer record, or, if the email hasn't been seen before, create a new customer record in our system.
-3. Use the legacy record's product ID to find or create a product record in our system. 👈 
-4. Add the product to the customer record's list of purchases.
-5. Notify the customer of the new location where they can download their files and update their account info.
-6. Log the successful import of the purchase record.
+### The goal is mapping the roles we need with the objects we have in our system.
 
 
-1. We must identify the messages we want to send in order to accomplish the task at hand. (This is mostly like based on pseudocode, do something like:)
-
-`Use the legacy record's product ID to find or create a product record in our system.`
-
-Identified message:
-`Use the record's #product_id to #get_product.`
-
-
-2. We must identify the roles which correspond to those messages.
-
-By identifying roles (objects that we are using to get the information) we can rewrite our steps like:
-`Use the purchase_record.product_id to product_inventory.get_product.`
-
-| Message       | Receiver Role     |
-|---------------|-------------------|
-| #get_product  | product_inventory |
-| #email_address, #product_id | purchase_record |
-
--- So we end up having each step of our method converted into something like: --
+What about methods with no input? 🤔
 
 ```ruby
-def import_legacy_purchase_data(data)
-  purchase_list = legacy_data_parser.parse_purchase_records(data) purchase_list.each do |purchase_record|
-       customer = customer_list.get_customer(purchase_record.email_address)
-       product  = product_inventory.get_product(purchase_record.product_id)
-       customer.add_purchased_product(product)
-       customer.notify_of_files_available(product)
-       log_successful_import(purchase_record)
-  end 
+def seconds_in_day 
+  24 * 60 * 60
 end
+```
+
+```ruby
+# This method could just as easily be a constant:
+  SECONDS_IN_DAY = 24 * 60 * 60
+```
+
+Overall a method can have many kinds of input, lets cover the most important ones in one simple example:
+- Through an instance variable
+- Arguments
+- Constant / Objects (like Time)
+- Thourgh a method in the same class
+- Constant inside the class
+
+
+```ruby
+class TimeCalc
+  SECONDS_IN_DAY = 24 * 60 * 60
+
+  def initialize
+    @start_date = Time.now 
+  end
+  
+  def time_n_days_from_now(num_days) 
+    @start_date + num_days * 24 * 60 * 60
+  end
+  
+  def seconds_in_week
+    seconds_in_days(7) 
+  end
+  
+  def seconds_in_days(num_days) 
+    num_days * SECONDS_IN_DAY
+  end
+end
+```
+
+> Any time we send a message to an object other than self in order to use its return value, we're using indirect inputs.
+
+In the next example we see how the first three lines are incharged of collecting input. Where only the last one is actually performing the work of the method.
+Also note how we are combining two inirect inouts (We are using the `user`to get the `prefs`, both indirect inputs.
+
+```ruby
+def format_time
+  user = ENV['USER']
+  prefs = YAML.load_file("/home/#{user}")
+  Time.now.strftime(format) 
+end
+
 ```
