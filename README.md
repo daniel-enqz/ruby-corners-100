@@ -12,5 +12,6 @@ In order to understand the corners of both enviorments better and to be able to 
 ---
 
 Other resources: 
-[Software Engineering Essentials](https://github.com/daniel-enqz/daniel-enqz/tree/main/PROGRAMMING_COURSE💙)
-[Object Oriented Design](https://github.com/daniel-enqz/daniel-enqz/tree/main/PROGRAMMING_COURSE💙/🎉%20OBJECT%20ORIENTED%20DESIGN)
+- [Software Engineering Essentials](https://github.com/daniel-enqz/daniel-enqz/tree/main/PROGRAMMING_COURSE💙)
+- [Object Oriented Design](https://github.com/daniel-enqz/daniel-enqz/tree/main/PROGRAMMING_COURSE💙/🎉%20OBJECT%20ORIENTED%20DESIGN)
+- [Design Patterns](https://github.com/daniel-enqz/daniel-enqz/tree/main/PROGRAMMING_COURSE💙/🎉%20OBJECT%20ORIENTED%20DESIGN/🍀%20DESIGN_PATTERNS)
