@@ -4,7 +4,7 @@
 > - Yukhiro "Matz" Matsumoto
 
 --- 
-The next insights about writing clean and understable code in ruby is insipred by the book:
+The next insights are insipred by the book:
 Confindent Ruby by Avdi Grimm. 
 ---
 
