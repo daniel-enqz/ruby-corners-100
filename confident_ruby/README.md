@@ -13,3 +13,6 @@ I believe that if we take a look at any given line of code in a method, we can n
 2. Performing work
 3. Delivering output
 4. Handling failures
+
+For intsance, lets take a look at the next example which actually looks everwhelming, its not ordered.....🤔
+![Screenshot 2023-05-05 at 18 02 24](https://user-images.githubusercontent.com/72522628/236586862-eb9a587f-8b8b-4608-94de-1b99442b3fa2.jpg)
