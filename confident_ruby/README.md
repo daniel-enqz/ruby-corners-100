@@ -51,19 +51,30 @@ end
 
 Overall a method can have many kinds of input, lets cover the most important ones in one simple example:
 - Through an instance variable
+- Arguments
 - Constant / Objects (like Time)
-- thourgh a method in the same class
-- Constant 
+- Thourgh a method in the same class
+- Constant inside the class
 
 
 ```ruby
 class TimeCalc
+  SECONDS_IN_DAY = 24 * 60 * 60
+
   def initialize
     @start_date = Time.now 
   end
   
   def time_n_days_from_now(num_days) 
     @start_date + num_days * 24 * 60 * 60
-  end 
- end
+  end
+  
+  def seconds_in_week
+    seconds_in_days(7) 
+  end
+  
+  def seconds_in_days(num_days) 
+    num_days * SECONDS_IN_DAY
+  end
+end
 ```
