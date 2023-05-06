@@ -80,3 +80,15 @@ end
 ```
 
 > Any time we send a message to an object other than self in order to use its return value, we're using indirect inputs.
+
+In the next example we see how the first three lines are incharged of collecting input. Where only the last one is actually performing the work of the method.
+Also note how we are combining two inirect inouts (We are using the `user`to get the `prefs`, both indirect inputs.
+
+```ruby
+def format_time
+  user = ENV['USER']
+  prefs = YAML.load_file("/home/#{user}")
+  Time.now.strftime(format) 
+end
+
+```
