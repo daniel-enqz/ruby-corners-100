@@ -48,3 +48,22 @@ end
 # This method could just as easily be a constant:
   SECONDS_IN_DAY = 24 * 60 * 60
 ```
+
+Overall a method can have many kinds of input, lets cover the most important ones in one simple example:
+- Through an instance variable
+- Constant / Objects (like Time)
+- thourgh a method in the same class
+- Constant 
+
+
+```ruby
+class TimeCalc
+  def initialize
+    @start_date = Time.now 
+  end
+  
+  def time_n_days_from_now(num_days) 
+    @start_date + num_days * 24 * 60 * 60
+  end 
+ end
+```
