@@ -78,3 +78,5 @@ class TimeCalc
   end
 end
 ```
+
+> Any time we send a message to an object other than self in order to use its return value, we're using indirect inputs.
