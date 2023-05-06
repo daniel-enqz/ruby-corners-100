@@ -23,6 +23,12 @@ For intsance, lets take a look at the next example which actually looks everwhel
 > Let's start by defining "Performing the work", which is basically the core of every method.
 
 #### Point 1: Sending the message:
+1. Identifying the messages we want to send (in language as close to that of the problem domain as possible); then...
+2. Determining the roles which make sense to receive those messages; and finally...
+3. Bridging the gap between the roles we've identified and the objects which actually exist in the system.
+
+I added an example in this file, please check it to undertsand this step better 👌
+
 **Feature:** Write a method which handles imports of CSV data from the old system to the new system.
 
 _NOTE: The next is a example of how can cover identfy the message out of a list of pseudocode to complete a feature._
