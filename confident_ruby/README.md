@@ -31,7 +31,7 @@ For intsance, lets take a look at the next example which actually looks everwhel
 2. Determining the roles which make sense to receive those messages; and finally...
 3. Bridging the gap between the roles we've identified and the objects which actually exist in the system.
 
-I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby/lib), please check it to undertsand this step better 👌
+I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/identifying-messages.md), please check it to undertsand this step better 👌
 
 #### 2. Collecting input:
 > Now that we know how the core system of our methods can be structured, lets take a look at the actual first step of our list.
@@ -39,5 +39,5 @@ I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-10
 Collecting input isn't just about finding needed inputs—it's about determining how lenient to be in accepting many types of input, and about whether to adapt the method's logic to suit the received collaborator types, or vice-versa.
 
 ### The goal is mapping the roles we need with the objects we have in our system.
-I added more info in [this file](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby/lib), please check it to undertsand this step better 👌
+I added more info in [this file](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby/lib/inputs.md), please check it to undertsand this step better 👌
 
