@@ -15,3 +15,4 @@ Other resources:
 - [Software Engineering Essentials](https://github.com/daniel-enqz/daniel-enqz/tree/main/PROGRAMMING_COURSE💙)
 - [Object Oriented Design](https://github.com/daniel-enqz/daniel-enqz/tree/main/PROGRAMMING_COURSE💙/🎉%20OBJECT%20ORIENTED%20DESIGN)
 - [Design Patterns](https://github.com/daniel-enqz/daniel-enqz/tree/main/PROGRAMMING_COURSE💙/🎉%20OBJECT%20ORIENTED%20DESIGN/🍀%20DESIGN_PATTERNS)
+- [Binary tree in Ruby](https://github.com/daniel-enqz/daniel-enqz/tree/main/PROGRAMMING_COURSE💙/🐬DATA_STRUCTURES/TREES)
