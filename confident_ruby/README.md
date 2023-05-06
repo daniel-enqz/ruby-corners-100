@@ -34,5 +34,5 @@ For intsance, lets take a look at the next example which actually looks everwhel
 I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby/lib), please check it to undertsand this step better 👌
 
 #### 2. Collecting input:
-> Now tha we know how the core system of our methods can be structured, lets take a look at the actual first step of our list.
+> Now that we know how the core system of our methods can be structured, lets take a look at the actual first step of our list.
 
