@@ -36,3 +36,15 @@ I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-10
 #### 2. Collecting input:
 > Now that we know how the core system of our methods can be structured, lets take a look at the actual first step of our list.
 
+What about methods with no input? 🤔
+
+```ruby
+def seconds_in_day 
+  24 * 60 * 60
+end
+```
+
+```ruby
+# This method could just as easily be a constant:
+  SECONDS_IN_DAY = 24 * 60 * 60
+```
