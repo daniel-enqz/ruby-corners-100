@@ -23,7 +23,7 @@ For intsance, lets take a look at the next example which actually looks everwhel
 
 ## So how can we create readable code and tell a story with our methods?
 
-#### "Performing the work":
+#### 1. Performing the work:
 > Let's start by defining "Performing the work", which is basically the core of every method.
 
 **We need 3 essential steps to achieve this**:
@@ -33,6 +33,6 @@ For intsance, lets take a look at the next example which actually looks everwhel
 
 I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby/lib), please check it to undertsand this step better 👌
 
-#### "Collecting input":
+#### 2. Collecting input:
 > Now tha we know how the core system of our methods can be structured, lets take a look at the actual first step of our list.
 
