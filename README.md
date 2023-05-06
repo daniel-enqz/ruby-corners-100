@@ -6,4 +6,11 @@ In order to understand the corners of both enviorments better and to be able to 
 ## Index
 
 - [Exceptional Ruby (Undertsand exceptions in Ruby)](https://github.com/daniel-enqz/exceptional-ruby/tree/master/exeptional_ruby)
-- [Confident Ruby (Understand Ruby's blocks, procs, lambdas, and closures)](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby)
+- [Confident Ruby (Writing clean code and vulding better ruby software)](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby)
+- [Eloquent Ruby](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby)
+
+---
+
+Other resources: 
+[Software Engineering Essentials](https://github.com/daniel-enqz/daniel-enqz/tree/main/PROGRAMMING_COURSE💙)
+[TREE in Ruby](https://github.com/daniel-enqz/daniel-enqz/tree/main/PROGRAMMING_COURSE💙)
