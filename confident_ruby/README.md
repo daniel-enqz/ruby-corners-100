@@ -54,7 +54,7 @@ By identifying roles (objects that we are using to get the information) we can r
 | #get_product  | product_inventory |
 | #email_address, #product_id | purchase_record |
 
--- So we end up having each step of our method converted into something like:
+-- So we end up having each step of our method converted into something like: --
 
 ```ruby
 def import_legacy_purchase_data(data)
