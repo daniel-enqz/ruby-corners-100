@@ -36,6 +36,11 @@ I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-10
 #### 2. Collecting input:
 > Now that we know how the core system of our methods can be structured, lets take a look at the actual first step of our list.
 
+Collecting input isn't just about finding needed inputs—it's about determining how lenient to be in accepting many types of input, and about whether to adapt the method's logic to suit the received collaborator types, or vice-versa.
+
+### The goal is mapping the roles we need with the objects we have in our system.
+
+
 What about methods with no input? 🤔
 
 ```ruby
