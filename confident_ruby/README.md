@@ -23,11 +23,16 @@ For intsance, lets take a look at the next example which actually looks everwhel
 
 ## So how can we create readable code and tell a story with our methods?
 
+#### "Performing the work":
 > Let's start by defining "Performing the work", which is basically the core of every method.
 
-#### Point 1: Sending the message:
+**We need 3 essential steps to achieve this**:
 1. Identifying the messages we want to send (in language as close to that of the problem domain as possible); then...
 2. Determining the roles which make sense to receive those messages; and finally...
 3. Bridging the gap between the roles we've identified and the objects which actually exist in the system.
 
 I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby/lib), please check it to undertsand this step better 👌
+
+#### "Collecting input":
+> Now tha we know how the core system of our methods can be structured, lets take a look at the actual first step of our list.
+
