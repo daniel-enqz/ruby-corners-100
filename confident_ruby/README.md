@@ -23,7 +23,7 @@ For intsance, lets take a look at the next example which actually looks everwhel
 
 ## So how can we create readable code and tell a story with our methods?
 
-#### 1. Performing the work:
+# 1. Performing the work:
 > Let's start by defining "Performing the work", which is basically the core of every method.
 
 **We need 3 essential steps to achieve this**:
@@ -33,7 +33,7 @@ For intsance, lets take a look at the next example which actually looks everwhel
 
 I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/identifying-messages.md), please check it to undertsand this step better 👌
 
-#### 2. Collecting input:
+# 2. Collecting input:
 > Now that we know how the core system of our methods can be structured, lets take a look at the actual first step of our list.
 
 Collecting input isn't just about finding needed inputs—it's about determining how lenient to be in accepting many types of input, and about whether to adapt the method's logic to suit the received collaborator types, or vice-versa.
@@ -41,7 +41,7 @@ Collecting input isn't just about finding needed inputs—it's about determining
 ### The goal is mapping the roles we need with the objects we have in our system.
 I added more info in [this file](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby/lib/inputs.md), please check it to undertsand this step better 👌
 
-# Whow can we do a better input collection.
+## Whow can we do a better input collection?
 1.- Be sure to use built-in conversion protocols (#to_str, #to_i, #to_path, or #to_ary.)
 Here some cool examples:
 
@@ -53,7 +53,7 @@ I added some examples of the difference bewteen explicit and implict methods [he
 
 ## Working with protocols
 
-1.- Using our own built-in protocols.
+2.- Using our own built-in protocols.
 
 > A well-documented protocol for making arbitrary objects convertible to our own types makes it possible to accept third-party objects as if they were "native".
 
@@ -100,88 +100,21 @@ class Meters
  end
 ```
 
-2.- Use built-in conversion functions
+3.- Use built-in conversion functions
 - Integer()
 - Array()
 
 
-3.- Convert strung type to classes
+4.- Convert string type to classes
+
 Imagine we are working on a Traffic Light system,where we can initialize new objects like:
 
 ```ruby
 TrafficLight.new("green")
 ```
-
 The problem is that we can ran into syntax errors, or non existent colors, etc. 
-Also each color may have different behaviours, lets look to a very cool example of an implementation with everything we have learned so far.
+Also each color may have different behaviours, I added a code example here that show us how to take advantage of polymorphism and Dependency Inversion Principle.
 
-- Caller:
-```ruby
-light = TrafficLight.new 
-light.change_to(:caution)
-light.signal
-puts "Next state is: #{light.next_state}"
-Turning on yellow lamp
-Ring ring ring!
-Next state is: stop
-```
 
-```ruby
-class TrafficLight
-  def change_to(state)
-    @state = State(state)
-  end
-
-  class State
-    def to_s 
-      name
-    end
-    
-    def name 
-      self.class.name.split('::').last.downcase
-    end
-    
-    def next_state 
-      @state.next_state
-    end
-    
-    def signal 
-      @state.signal(self)
-    end
-    
-    def signal(traffic_light) 
-      traffic_light.turn_on_lamp(color.to_sym)
-    end 
-  end
-
-  class Stop < State
-    def color; 'red'; end 
-    def next_state; Proceed.new; end
-  end
-  
-  class Caution < State
-    def color; 'yellow'; end 
-    def next_state; Stop.new; end 
-    def signal(traffic_light)
-      super
-      traffic_light.ring_warning_bell 
-    end
-   end
-   
-  class Proceed < State
-    def color; 'green'; end 
-    def next_state; Caution.new; end
-  end
-  
-  private
-  
-  def State(state)
-    case state
-    when State then state
-    else 
-      self.class.const_get(state.to_s.capitalize).new 
-    end
-  end
-end
-```
+5.- Reject unworkable values with preconditions
 
