@@ -49,9 +49,31 @@ Here some cool examples:
 
 I added some examples of the difference bewteen explicit and implict methods [here](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/built-in-methods.md).
 
-### About Flexibility:
+### About Flexibility and using our own built-in protocols.
 
 > A well-documented protocol for making arbitrary objects convertible to our own types makes it possible to accept third-party objects as if they were "native".
+
+```ruby
+require 'forwardable' 
+
+class Meters     
+  extend Forwardable
+  
+  def_delegators :@value, :to_s, :to_int, :to_i
+
+  def initialize(value) 
+    @value = value
+  end
+  
+  def -(other)
+    self.class.new(value - other.value)
+  end
+
+  protected
+  
+  attr_reader :value 
+ end
+```
 
 
 
