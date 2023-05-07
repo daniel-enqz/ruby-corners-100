@@ -98,7 +98,9 @@ class Meters
  end
 ```
 
-
+2.- Use built-in conversion functions
+- Integer()
+- Array()
 
 
 
