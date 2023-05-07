@@ -155,3 +155,32 @@ end
 
 This is great because we the first we are seeing on methods or clases, is a precondtion statement, which serves to know the expected type.
 
+6.- Use #fetch to assert the presence of Hash keys.
+> This one was one of my favourite ones in the book, when we are sending a hash to a method, there are multiple ways in which we can check for existent and non existent keys.
+
+The next example is taking advantage of the precodintions pattern we learned before. 
+```ruby
+def add_user(attributes)
+  login = attributes[:login] 
+  unless login
+    raise ArgumentError, 'Login must be supplied' 
+   end
+   
+  password = attributes[:password] 
+   unless password
+     raise ArgumentError, 'Password (or false) must be supplied' 
+   end
+[...]
+```
+Reasons this is bad code:
+- Its to many lines of code
+- We will ran in the next error:
+
+```ruby
+add_user(login: 'bob', password: '12345', dry_run: true) # >> useradd --password 12345 bob
+add_user(login: 'bob', dry_run: true) # ~> #<ArgumentError: Password (or false) must be supplied>
+add_user(login: 'bob', password: false, dry_run: true) # >> #<ArgumentError: Password (or false) must be supplied>
+Uh-oh. In theory, passing :password => false should function as a flag to cause the method to create an account with login disabled.
+```
+
+
