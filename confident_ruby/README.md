@@ -44,7 +44,8 @@ I added more info in [this file](https://github.com/daniel-enqz/ruby-corners-100
 # Whow can we do a better input collection.
 1.- Be sure to use built-in conversion protocols (#to_str, #to_i, #to_path, or #to_ary.)
 Here some cool examples:
-![Screenshot 2023-05-06 at 20 43 36](https://user-images.githubusercontent.com/72522628/236654936-0063fce5-a949-4690-855f-4cb7ba33ec6f.jpg)
+
+<img src="https://user-images.githubusercontent.com/72522628/236654936-0063fce5-a949-4690-855f-4cb7ba33ec6f.jpg" alt="kublau" width="600" height="300">
 
 
 
