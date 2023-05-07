@@ -117,7 +117,8 @@ Also each color may have different behaviours, lets look to a very cool example 
 
 - Caller:
 ```ruby
-light = TrafficLight.new light.change_to(:caution)
+light = TrafficLight.new 
+light.change_to(:caution)
 light.signal
 puts "Next state is: #{light.next_state}"
 Turning on yellow lamp
