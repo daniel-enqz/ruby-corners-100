@@ -55,6 +55,8 @@ I added some examples of the difference bewteen explicit and implict methods [he
 
 - As you can see, in the next example we are only allowing `-`, can only be performed on instances of `Meters`.
 - We are also crearing our own converison protocol .to_meters`
+- We can now report changes in altitude without fear of mixed units. 
+- We've ensured that any object which doesn't support the #to_meters protocol will trigger a NoMethodError.
 
 ```ruby
 
