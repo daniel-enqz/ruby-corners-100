@@ -51,7 +51,7 @@ I added some examples of the difference bewteen explicit and implict methods [he
 
 ### About Flexibility:
 
-"A well-documented protocol for making arbitrary objects convertible to our own types makes it possible to accept third-party objects as if they were 'native'".
+> A well-documented protocol for making arbitrary objects convertible to our own types makes it possible to accept third-party objects as if they were "native".
 
 
 
