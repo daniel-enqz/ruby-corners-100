@@ -113,8 +113,22 @@ TrafficLight.new("green")
 The problem is that we can ran into syntax errors, or non existent colors, etc. 
 Also each color may have different behaviours, lets look to a very cool example of an implementation with everything we have learned so far.
 
+- Caller:
+```ruby
+light = TrafficLight.new light.change_to(:caution)
+light.signal
+puts "Next state is: #{light.next_state}"
+Turning on yellow lamp
+Ring ring ring!
+Next state is: stop
+```
+
 ```ruby
 class TrafficLight
+  def change_to(state)
+    @state = State(state)
+  end
+
   class State
     def to_s 
       name
@@ -122,6 +136,14 @@ class TrafficLight
     
     def name 
       self.class.name.split('::').last.downcase
+    end
+    
+    def next_state 
+      @state.next_state
+    end
+    
+    def signal 
+      @state.signal(self)
     end
     
     def signal(traffic_light) 
@@ -146,6 +168,16 @@ class TrafficLight
   class Proceed < State
     def color; 'green'; end 
     def next_state; Caution.new; end
+  end
+  
+  private
+  
+  def State(state)
+    case state
+    when State then state
+    else 
+      self.class.const_get(state.to_s.capitalize).new 
+    end
   end
 end
 ```
