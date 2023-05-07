@@ -187,5 +187,6 @@ We can rewrite the method as follows:
 
 ```ruby
 def add_user(attributes)
-  login = attributes.fetch(:login) password = attributes.fetch(:password)
+  login = attributes.fetch(:login) 
+  password = attributes.fetch(:password)
 ```
