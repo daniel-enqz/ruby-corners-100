@@ -117,6 +117,8 @@ Also each color may have different behaviours, I added a code example [here](htt
 
 
 5.- Reject unworkable values with preconditions
+
+In this next example we are using a precondition to check date is not nil and that it always is what we expect, we are using our constructor here.
 ```ruby
   require 'date' 
 
@@ -133,5 +135,8 @@ Also each color may have different behaviours, I added a code example [here](htt
     raise TypeError, "Invalid hire date" unless
     new_hire_date.is_a?(Date) @hire_date = new_hire_date
   end
+
+  # [...]
 ```
+
 
