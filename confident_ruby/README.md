@@ -53,7 +53,18 @@ I added some examples of the difference bewteen explicit and implict methods [he
 
 > A well-documented protocol for making arbitrary objects convertible to our own types makes it possible to accept third-party objects as if they were "native".
 
+- As you can see, in the next example we are only allowing `-`, can only be performed on instances of `Meters`.
+- We are also crearing our own converison protocol .to_meters`
+
 ```ruby
+
+class Feet
+  def to_meters
+    Meters.new((value * 0.3048).round)
+  end 
+end
+
+
 require 'forwardable' 
 
 class Meters     
@@ -70,15 +81,18 @@ class Meters
   end
 
   def -(other)
-    self.class.new(value - other.value)
+    self.class.new(value - other.to_meters.value)
   end
 
   protected
   
   attr_reader :value 
  end
+ 
+ def report_altitude_change(current_altitude, previous_altitude) 
+  change = current_altitude.to_meters - previous_altitude.to_meters
+ end
 ```
-
 
 
 
