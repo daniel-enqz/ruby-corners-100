@@ -103,5 +103,50 @@ class Meters
 - Array()
 
 
+3.- Convert strung type to classes
+Imagine we are working on a Traffic Light system,where we can initialize new objects like:
 
+```ruby
+TrafficLight.new("green")
+```
+
+The problem is that we can ran into syntax errors, or non existent colors, etc. 
+Also each color may have different behaviours, lets look to a very cool example of an implementation with everything we have learned so far.
+
+```ruby
+class TrafficLight
+  class State
+    def to_s 
+      name
+    end
+    
+    def name 
+      self.class.name.split('::').last.downcase
+    end
+    
+    def signal(traffic_light) 
+      traffic_light.turn_on_lamp(color.to_sym)
+    end 
+  end
+
+  class Stop < State
+    def color; 'red'; end 
+    def next_state; Proceed.new; end
+  end
+  
+  class Caution < State
+    def color; 'yellow'; end 
+    def next_state; Stop.new; end 
+    def signal(traffic_light)
+      super
+      traffic_light.ring_warning_bell 
+    end
+   end
+   
+  class Proceed < State
+    def color; 'green'; end 
+    def next_state; Caution.new; end
+  end
+end
+```
 
