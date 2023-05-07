@@ -49,7 +49,9 @@ Here some cool examples:
 
 I added some examples of the difference bewteen explicit and implict methods [here](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/built-in-methods.md).
 
-### About Flexibility and using our own built-in protocols.
+## Working with protocols
+
+1.- Using our own built-in protocols.
 
 > A well-documented protocol for making arbitrary objects convertible to our own types makes it possible to accept third-party objects as if they were "native".
 
