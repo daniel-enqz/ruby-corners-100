@@ -183,5 +183,9 @@ add_user(login: 'bob', password: false, dry_run: true) # >> #<ArgumentError: Pas
 # Uh-oh. In theory, passing :password => false should function as a flag to cause the method to create an account with login disabled.
 # But this will not pass the unless conditional
 ```
+We can rewrite the method as follows:
 
-
+```ruby
+def add_user(attributes)
+  login = attributes.fetch(:login) password = attributes.fetch(:password)
+```
