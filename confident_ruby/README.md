@@ -117,4 +117,21 @@ Also each color may have different behaviours, I added a code example [here](htt
 
 
 5.- Reject unworkable values with preconditions
+```ruby
+  require 'date' 
+
+  class Employee
+
+  attr_accessor :name 
+  attr_reader :hire_date
+
+  def initialize(name, hire_date) 
+    @name = name self.hire_date = hire_date
+  end
+
+  def hire_date=(new_hire_date)
+    raise TypeError, "Invalid hire date" unless
+    new_hire_date.is_a?(Date) @hire_date = new_hire_date
+  end
+```
 
