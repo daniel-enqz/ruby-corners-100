@@ -47,7 +47,7 @@ Here some cool examples:
 
 <img src="https://user-images.githubusercontent.com/72522628/236654936-0063fce5-a949-4690-855f-4cb7ba33ec6f.jpg" alt="kublau" width="600" height="300">
 
-I added some examples of the difference bewteen explicit and implict methods here.
+I added some examples of the difference bewteen explicit and implict methods [here](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/built-in-methods.md).
 
 
 
