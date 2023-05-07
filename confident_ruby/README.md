@@ -139,4 +139,19 @@ In this next example we are using a precondition to check date is not nil and th
   # [...]
 ```
 
+We can also use preconditions not only in clases for setting instance variable but for individual methods as well.
+
+```ruby
+def issue_service_award(employee_address, hire_date, award_date) 
+  unless (FOUNDING_DATE..Date.today).include?(hire_date)
+    raise RangeError, "Fishy hire_date: #{hire_date}" 
+  end
+  years_employed = ((Date.today - hire_date) / 365).to_i
+
+  # $10 for every year employed
+  issue_gift_card(address: employee_address, amount: 10 * years_employed)
+end
+```
+
+This is great because we the first we are seeing on methods or clases, is a precondtion statement, which serves to know the expected type.
 
