@@ -180,7 +180,8 @@ Reasons this is bad code:
 add_user(login: 'bob', password: '12345', dry_run: true) # >> useradd --password 12345 bob
 add_user(login: 'bob', dry_run: true) # ~> #<ArgumentError: Password (or false) must be supplied>
 add_user(login: 'bob', password: false, dry_run: true) # >> #<ArgumentError: Password (or false) must be supplied>
-Uh-oh. In theory, passing :password => false should function as a flag to cause the method to create an account with login disabled.
+# Uh-oh. In theory, passing :password => false should function as a flag to cause the method to create an account with login disabled.
+# But this will not pass the unless conditional
 ```
 
 
