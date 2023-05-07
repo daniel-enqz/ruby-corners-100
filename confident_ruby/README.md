@@ -65,6 +65,10 @@ class Meters
     @value = value
   end
   
+  def to_meters 
+    self
+  end
+
   def -(other)
     self.class.new(value - other.value)
   end
