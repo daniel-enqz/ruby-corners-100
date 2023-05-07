@@ -49,6 +49,8 @@ Here some cool examples:
 
 I added some examples of the difference bewteen explicit and implict methods [here](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/built-in-methods.md).
 
+> The key to working productively in an object-oriented language is to make the type system and polymorphic method dispatch do your work for you.
+
 ## Working with protocols
 
 1.- Using our own built-in protocols.
