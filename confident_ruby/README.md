@@ -311,3 +311,4 @@ By using a Special Case object, we isolate the differences between the typical c
  ```ruby
   location = Geolocatron.locate(member.address) || group.city_location
  ```
+7.- We can find nil values all over the program. Because of their ubiquity, communicate little or no meaning when they turn up unexpectedly. So how can we communicate problems more effectively?
