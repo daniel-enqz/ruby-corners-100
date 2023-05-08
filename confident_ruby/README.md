@@ -10,6 +10,8 @@ Confindent Ruby by Avdi Grimm.
 
 > A single method is like a page in that story. And unfortunately, a lot of methods are just as convoluted, equivocal, and confusing as that made-up page above.
 
+> Method construction and object design are not two independent disciplines. They are more like a dance, where each partner's movements influence the other's. The system's object design is reflected down into methods, and method construction in turn can be reflected up to the larger design.
+
 I believe that if we take a look at any given line of code in a method, we can nearly always categorize it as serving one of the following roles:
 
 1. Collecting input
@@ -278,3 +280,4 @@ else
   render_login_button
 end
 ```
+In this example we constructed a Special Case object which fully represents the case of "no logged-in user". 
