@@ -224,7 +224,9 @@ end
 ```
 
 7.- Representing Special Case Objects.
+  
 
+When we work with sessions we have the special case when the user is not logged in. This is how Ruby on Rails handles it:
 ```ruby
 def current_user
   if session[:user_id]
@@ -232,6 +234,11 @@ def current_user
   end
 end
 ```
+🤔 But this will return just nil when theres not user logged in. Many methods in our codebase will look like this:
 
-
-
+```ruby
+def greeting "Hello, " +
+ current_user ? current_user.name : "Anonymous" +
+ ", how are you today?"
+end
+```
