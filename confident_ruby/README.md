@@ -318,7 +318,7 @@ Sometimes tracking where the nil value comes from, its easier to give a meaninfg
   
  ```ruby
   credentials = options.fetch(:credentials) { :credentials_not_set }
-  -:7:in `list_widgets': undefined method `fetch' for
+   -:7:in `list_widgets': undefined method `fetch' for
      :credentials_not_set:Symbol (NoMethodError)
    from -:19:in `<main>'
  ```
