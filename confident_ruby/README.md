@@ -213,6 +213,7 @@ test{ h.fetch(:x) } # => "Password (or false) must be supplied"
 
 - Note how we can also give rescue actions insead of throwing errors. Check page 122 where this is explained with more detail.
 We will use a default logger if no :logger is given.
+
 ```ruby
 DEFAULT_LOGGER = -> { Logger.new($stderr) }
 
@@ -221,3 +222,16 @@ def emergency_kittens(options={})
   # ...
 end
 ```
+
+7.- Representing Special Case Objects.
+
+```ruby
+def current_user
+  if session[:user_id]
+    User.find(session[:user_id]) 
+  end
+end
+```
+
+
+
