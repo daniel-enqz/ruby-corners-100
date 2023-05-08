@@ -61,3 +61,20 @@ def method
  Array(result)
 end
 ```
+2.- Call back instead of returning.
+> A callback on success is more meaningful than a true or false return value.
+
+The next is great example because its like reading plain english: "If the files are nor imported, send book invitation (run the block given `&impoort_callback`)".
+```ruby
+def import_purchase(date, title, user_email, &import_callback) 
+  user = User.find_by_email(user_email)
+  unless user.purchased_titles.include?(title)
+    purchase = user.purchases.create(title: title, purchased_at: date)
+   import_callback.call(user, purchase) 
+ end
+end
+
+import_purchases(purchase_data) do |user, purchase| 
+ send_book_invitation_email(user.email, purchase.title)
+end
+```
