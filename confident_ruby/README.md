@@ -12,7 +12,7 @@ Confindent Ruby by Avdi Grimm.
 
 > Method construction and object design are not two independent disciplines. They are more like a dance, where each partner's movements influence the other's. The system's object design is reflected down into methods, and method construction in turn can be reflected up to the larger design.
 
-I believe that if we take a look at any given line of code in a method, we can nearly always categorize it as serving one of the following roles:
+_"I believe that if we take a look at any given line of code in a method, we can nearly always categorize it as serving one of the following roles:"_
 
 1. Collecting input
 2. Performing work
