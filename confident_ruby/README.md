@@ -124,3 +124,17 @@ rescue #---------------------------
  # failure scenarios go down here
 end
 ```
+
+2.- Use a check popen method that handles errors. Why?
+
+begin/rescue/end blocks obstruct the narrative flow of a method. They distract from the primary intent of the code and instead put the focus on edge cases. A checked method encapsulates the error case, and centralizes the code needed to handle that case if it ever crops up in another method. It is a stepping stone to a fully-fledged adapter class for external code.
+
+```ruby
+def checked_popen(command, mode, error_policy=->{raise}) 
+ IO.popen(command, mode) do |process|
+  return yield(process) 
+ end
+ rescue Errno::EPIPE 
+  error_policy.call
+end
+```
