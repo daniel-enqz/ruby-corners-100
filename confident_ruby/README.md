@@ -50,3 +50,4 @@ I added more info in [this file](https://github.com/daniel-enqz/ruby-corners-100
 I choose the top 10 approaches that were more intresting for me from the book and put them [here](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/collecting-input.md), clear descriptions and code examples can also be found there 🪴
 
 # 3. Delivering Output
+> _"We should also ensure that our outputs make it easy for the clients of our code to be written in a confident style as well."_
