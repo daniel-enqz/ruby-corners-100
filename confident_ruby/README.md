@@ -188,5 +188,19 @@ We can rewrite the method as follows:
 ```ruby
 def add_user(attributes)
   login = attributes.fetch(:login) 
-  password = attributes.fetch(:password)
+  password = attributes.fetch(:password) do
+    raise KeyError, "Password (or false) must be supplied" 
+   end
+# ...
+end
+```
+
+The good think about fetch is that it will raise an exception when no key is given, we can also use fetch with Arrays or ENV objects.
+See how we are also giving custom error messages by givinga block to fetch. 
+
+```ruby
+test{ h.fetch(:a) } # => "truthy (123)"
+test{ h.fetch(:b) } # => "falsey (false)"
+test{ h.fetch(:c) } # => "falsey (nil)"
+test{ h.fetch(:x) } # => "Password (or false) must be supplied" 
 ```
