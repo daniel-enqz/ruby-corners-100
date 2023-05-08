@@ -106,12 +106,14 @@ class Meters
 - Integer()
 - Array()
 
+```ruby
 Kernel#Float is stricter than String#to_f:
    Float("$1.23")
    # ~> -:1:in `Float': invalid value for Float(): "$1.23"
    (ArgumentError)
    # ~>    from -:1:in `<main>'
 
+```
 
 4.- Convert string type to classes
 
