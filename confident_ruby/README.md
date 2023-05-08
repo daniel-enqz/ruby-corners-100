@@ -242,3 +242,15 @@ def greeting "Hello, " +
  ", how are you today?"
 end
 ```
+  
+We can create a special case object that handles this not session given case:
+
+```ruby
+def current_user
+  if session[:user_id]
+    User.find(session[:user_id]) 
+  else
+    GuestUser.new(session) 
+  end
+end
+```
