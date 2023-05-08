@@ -325,5 +325,5 @@ Sometimes tracking where the nil value comes from, its easier to give a meaninfg
   
 By supplying a symbolic placeholder value, we've enabled the method to communicate more clearly with the client coder. And we've done it with the smallest of changes to the code.
 
-8.-  Bundle arguments into parameter objects (Check Map/Points example in page 180)
+8.- Bundle arguments into parameter objects (Check Map/Points example in page 182)
 
