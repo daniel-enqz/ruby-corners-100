@@ -82,4 +82,4 @@ end
 nil is the worst possible representation of a failure: it carries no meaning but can still break things, a workable but semantically blank object—such as an empty string—may be the most appropriate result. 
 
 4.- Represent failure with a special case object
-We show a clear example in ["Collecting Input"](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/collecting-input.md) point 
+We show a clear example in ["Collecting Input"](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/collecting-input.md) point 7
