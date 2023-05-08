@@ -113,3 +113,6 @@ end
 6.- consider using throw and catch
 
 # 4. Handling failure
+
+Do we have alternatives to: begin/rescue/end (BRE) block. ??? 🤔
+
