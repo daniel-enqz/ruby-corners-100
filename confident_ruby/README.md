@@ -367,4 +367,27 @@ map.draw_starred_point(7, 9) do |point|
 end
 
 10.- Sending Procs
+As we see in the next example, we can send procs to handle errors and edge cases.
 
+```ruby
+def delete_files(files, options={})
+  error_policy =
+    options.fetch(:on_error) { ->(file, error) { raise error } } symlink_policy =
+    options.fetch(:on_symlink) { ->(file) { File.delete(file) } } files.each do |file|
+  begin
+    if File.symlink?(file)
+      symlink_policy.call(file) 
+    else
+      File.delete(file) 
+    end
+  rescue => error 
+    error_policy.call(file, error)
+  end 
+end
+```
+
+```ruby
+  delete_files(
+  ['file1', 'file2'],
+  on_error: ->(file, error) { warn error.message }, on_symlink: ->(file) { File.delete(File.realpath(file)) })
+```
