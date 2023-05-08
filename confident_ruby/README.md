@@ -365,6 +365,7 @@ map.draw_starred_point(7, 9) do |point|
   point.magnitude = 15 
   point.fuzzy_radius = 50
 end
+```
 
 10.- Sending Procs
 As we see in the next example, we can send procs to handle errors and edge cases.
