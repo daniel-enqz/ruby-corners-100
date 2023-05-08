@@ -78,3 +78,5 @@ import_purchases(purchase_data) do |user, purchase|
  send_book_invitation_email(user.email, purchase.title)
 end
 ```
+3.- Returning bengin values
+nil is the worst possible representation of a failure: it carries no meaning but can still break things, a workable but semantically blank object—such as an empty string—may be the most appropriate result. 
