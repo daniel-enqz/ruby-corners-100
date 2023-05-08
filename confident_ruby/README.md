@@ -110,3 +110,6 @@ else
  logger.error "Error importing #{title} for #{user_email}: #{result.error}"
 end
 ```
+6.- consider using throw and catch
+
+# 4. Handling failure
