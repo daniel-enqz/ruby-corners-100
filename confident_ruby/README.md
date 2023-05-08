@@ -163,4 +163,6 @@ def filter_through_pipe(command, message)
  result
 end
 ```
-# Finally, Refactoring for Confidence 🏎️
+
+
+![Screenshot 2023-05-08 at 10 28 39](https://user-images.githubusercontent.com/72522628/236878369-e1254a6c-1048-4195-910d-08e53deff3d1.jpg)
