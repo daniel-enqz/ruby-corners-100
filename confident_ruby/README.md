@@ -116,3 +116,11 @@ end
 
 Do we have alternatives to: begin/rescue/end (BRE) block. ??? 🤔
 
+1.- Prefer top-level rescue clause
+```ruby
+def bar
+ # happy path goes up here
+rescue #--------------------------- 
+ # failure scenarios go down here
+end
+```
