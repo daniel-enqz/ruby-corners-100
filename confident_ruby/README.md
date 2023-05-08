@@ -341,7 +341,7 @@ We added a Point class to act as a parameter object, and then elaborated with va
  
 9.- Yield a parameter builder object
 
-When working with methods that may require options, this is a super cool example of how we can send multiple ans custom options by having isolated objects created and using a yield/block to send to methods.
+When working with methods that may require options, this is a super cool example of how we can send multiple ans custom options by having isolated objects created and using a yield/block to send to methods. (Faraday gem uses this pattern 🙌) 
   
 ```ruby
 class Map
