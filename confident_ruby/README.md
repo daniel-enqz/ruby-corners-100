@@ -271,6 +271,7 @@ def greeting
   "Hello, #{current_user.name}, how are you today?"
 end
 ```
+The cool think about this is that we can gradually be changing methods in our program. Gretting is sort of like our "test pilot". We can add more methods to the GuestUser class.
 We can even take advantage of polymorpishm and handle this cases:
 
 ```ruby
@@ -282,5 +283,26 @@ end
 ```
 In this example we constructed a Special Case object which fully represents the case of "no logged-in user".
   
+We can isolate test scenarios in Rspec like:
+
+```ruby
+shared_examples_for 'a user' do
+  it { should respond_to(:name) }
+  it { should respond_to(:authenticated?) } it { should respond_to(:has_role?) }
+  it { should respond_to(:visible_listings) } it { should respond_to(:last_seen_online=) } it { should respond_to(:cart) }
+end
+
+describe GuestUser do
+  subject { GuestUser.new(stub('session')) } 
+  it_should_behave_like 'a user'
+end
+ 
+describe User do
+  subject { User.new } 
+  it_should_behave_like 'a user'
+end
+```
+  
 By using a Special Case object, we isolate the differences between the typical case and the special case to a single location in the code, and let polymorphism ensure that the right code gets executed. The end product is code that reads more cleanly and succinctly, and which has better partitioning of responsibilities.
+
 
