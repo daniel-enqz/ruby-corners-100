@@ -254,3 +254,18 @@ def current_user
   end
 end
 ```
+  
+This will help us not relly on unexpected nil values.
+  
+```ruby
+class GuestUser
+  def name 
+    "Anonymous"
+  end 
+end
+  
+# This simplifies the greeting code nicely.
+def greeting
+  "Hello, #{current_user.name}, how are you today?"
+end
+```
