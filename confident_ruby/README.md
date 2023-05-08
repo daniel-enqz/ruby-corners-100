@@ -40,6 +40,8 @@ I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-10
 
 Collecting input isn't just about finding needed inputs—it's about determining how lenient to be in accepting many types of input, and about whether to adapt the method's logic to suit the received collaborator types, or vice-versa.
 
+> Methods may be dominated by handling for edge cases. This is hardly confident code.
+
 ### The goal is mapping the roles we need with the objects we have in our system.
 I added more info in [this file](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby/lib/inputs.md), please check it to undertsand this step better 👌
 
