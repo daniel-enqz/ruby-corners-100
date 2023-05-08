@@ -51,3 +51,6 @@ I choose the top 10 approaches that were more intresting for me from the book an
 
 # 3. Delivering Output
 > _"We should also ensure that our outputs make it easy for the clients of our code to be written in a confident style as well."_
+
+1.- Writing total functions:
+Methods that may or may not return an array put an extra burden on callers to check the type of the result. Ensuring that an array is always returned no matter what enables callers to handle the result in a consistent, confident fashion.
