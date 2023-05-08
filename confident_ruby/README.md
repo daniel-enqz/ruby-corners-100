@@ -269,3 +269,12 @@ def greeting
   "Hello, #{current_user.name}, how are you today?"
 end
 ```
+We can even take advantage of polymorpishm and handle this cases:
+
+```ruby
+if current_user.authenticated? 
+  render_logout_button
+else
+  render_login_button
+end
+```
