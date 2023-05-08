@@ -312,3 +312,16 @@ By using a Special Case object, we isolate the differences between the typical c
   location = Geolocatron.locate(member.address) || group.city_location
  ```
 7.- We can find nil values all over the program. Because of their ubiquity, communicate little or no meaning when they turn up unexpectedly. So how can we communicate problems more effectively?
+
+  
+Sometimes tracking where the nil value comes from, its easier to give a meaninfgul way to show the erro with a symbol
+  
+ ```ruby
+  credentials = options.fetch(:credentials) { :credentials_not_set }
+  -:7:in `list_widgets': undefined method `fetch' for
+     :credentials_not_set:Symbol (NoMethodError)
+   from -:19:in `<main>'
+ ```
+  
+By supplying a symbolic placeholder value, we've enabled the method to communicate more clearly with the client coder. And we've done it with the smallest of changes to the code.
+
