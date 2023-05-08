@@ -307,3 +307,7 @@ By using a Special Case object, we isolate the differences between the typical c
 
 5.- Using a special object to represent "do nothing" cases is a powerful way to clean up code by eliminating spurious conditionals.
 6.- A known-good placeholder can eliminate tedious checks for the presence of optional information.
+ For example, when no location is given we can just substitute for a bengin value. `group.city_location` serves as a fallback that will not harm our program.
+ ```ruby
+  location = Geolocatron.locate(member.address) || group.city_location
+ ```
