@@ -138,3 +138,28 @@ def checked_popen(command, mode, error_policy=->{raise})
   error_policy.call
 end
 ```
+
+3.- Enter a Bouncer Method.
+
+```ruby
+# This is our Bouncer method
+def check_child_exit_status 
+ unless $?.success?
+  raise ArgumentError,
+  "Command exited with status "\ "#{$?.exitstatus}"
+ end 
+end
+```
+As you can see with a minimum of disruption to the method flow, we are usuing the check_child_exit_status to raise an exception un case of error
+
+```ruby
+def filter_through_pipe(command, message)
+ result = checked_popen(command, "w+", ->{message}) do |process|
+        process.write(message)
+        process.close_write
+        process.read
+ end
+ check_child_exit_status
+ result
+end
+```
