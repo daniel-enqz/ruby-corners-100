@@ -366,4 +366,5 @@ map.draw_starred_point(7, 9) do |point|
   point.fuzzy_radius = 50
 end
 
+10.- Sending Procs
 
