@@ -305,4 +305,4 @@ end
   
 By using a Special Case object, we isolate the differences between the typical case and the special case to a single location in the code, and let polymorphism ensure that the right code gets executed. The end product is code that reads more cleanly and succinctly, and which has better partitioning of responsibilities.
 
-
+5.- Using a special object to represent "do nothing" cases is a powerful way to clean up code by eliminating spurious conditionals.
