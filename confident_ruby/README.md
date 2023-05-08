@@ -280,4 +280,7 @@ else
   render_login_button
 end
 ```
-In this example we constructed a Special Case object which fully represents the case of "no logged-in user". 
+In this example we constructed a Special Case object which fully represents the case of "no logged-in user".
+  
+By using a Special Case object, we isolate the differences between the typical case and the special case to a single location in the code, and let polymorphism ensure that the right code gets executed. The end product is code that reads more cleanly and succinctly, and which has better partitioning of responsibilities.
+
