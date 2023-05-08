@@ -326,4 +326,40 @@ Sometimes tracking where the nil value comes from, its easier to give a meaninfg
 By supplying a symbolic placeholder value, we've enabled the method to communicate more clearly with the client coder. And we've done it with the smallest of changes to the code.
 
 8.- Bundle arguments into parameter objects (Check Map/Points example in page 182)
+Relying on objects, will let us going from this:
+ ```ruby
+map = Map.new
+map.draw_point(23, 32, starred: true, fuzzy_radius: 100)
+ ```
+  
+ ```ruby
+map = Map.new
+p1 = FuzzyPoint.new(StarredPoint.new(23, 32), 100)
+map.draw_point(p1)
+ ```
+We added a Point class to act as a parameter object, and then elaborated with various specializations and decorations of the Point class. 
+ 
+9.- Yield a parameter builder object
+
+When working with methods that may require options, this is a super cool example of how we can send multiple ans custom options by having isolated objects created and using a yield/block to send to methods.
+  
+```ruby
+class Map
+  def draw_point(point_or_x, y=:y_not_set_in_draw_point)
+    point = point_or_x.is_a?(Integer) ? Point.new(point_or_x, y) : point_or_x
+    builder = PointBuilder.new(point) yield(builder) if block_given? builder.point.draw_on(self)
+  end
+  
+  def draw_starred_point(x, y, &point_customization) 
+    draw_point(StarredPoint.new(x, y), &point_customization)
+  end
+# ...
+end
+  
+map.draw_starred_point(7, 9) do |point| 
+  point.name = "gold buried here" 
+  point.magnitude = 15 
+  point.fuzzy_radius = 50
+end
+
 
