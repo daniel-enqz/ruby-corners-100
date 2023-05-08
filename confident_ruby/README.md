@@ -83,3 +83,29 @@ nil is the worst possible representation of a failure: it carries no meaning but
 
 4.- Represent failure with a special case object
 We show a clear example in ["Collecting Input"](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/collecting-input.md) point 7
+
+5.- Returning special case obkjects for readiness.
+
+The next is a good example because its clear we are usuing the status object we created, and readiness as well as more customization is enhanced.
+```ruby
+def import_purchase(date, title, user_email) user = User.find_by_email(user_email)
+ if user.purchased_titles.include?(title)
+  ImportStatus.redundant 
+ else
+   purchase = user.purchases.create(title: title, purchased_at: date)
+  ImportStatus.success 
+ end
+ rescue => error 
+  ImportStatus.failed(error)
+end
+```
+```ruby
+result = import_purchase(date, title, user_email) 
+if result.success?
+ send_book_invitation_email(user_email, title) 
+elsif result.redundant?
+ logger.info "Skipped #{title} for #{user_email}" 
+else
+ logger.error "Error importing #{title} for #{user_email}: #{result.error}"
+end
+```
