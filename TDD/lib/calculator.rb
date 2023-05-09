@@ -1,44 +1,35 @@
-require "rspec/autorun"
+# Use TDD principles to build out name functionality for a Person.
+# Here are the requirements:
+# - Add a method to return the full name as a string. A full name includes
+#   first, middle, and last name. If the middle name is missing, there shouldn't
+#   have extra spaces.
+# - Add a method to return a full name with a middle initial. If the middle name
+#   is missing, there shouldn't be extra spaces or a period.
+# - Add a method to return all initials. If the middle name is missing, the
+#   initials should only have two characters.
+#
+# We've already sketched out the spec descriptions for the #full_name. Try
+# building the specs for that method, watch them fail, then write the code to
+# make them pass. Then move on to the other two methods, but this time you'll
+# create the descriptions to match the requirements above.
 
-class Calculator
-  def add(a, b)
-    a + b
+class Person
+  def initialize(first_name:, middle_name: nil, last_name:)
+    @first_name = first_name
+    @middle_name = middle_name
+    @last_name = last_name
   end
 
-  def factorial(n)
-    if n == 0
-      1
-    else
-      (1..n).reduce(:*)
-    end
-  end
+  # implement your behavior here
 end
 
-calc = Calculator.new
-calc.add(5, 10) # => 15
-
-describe Calculator do
-  describe "#add" do
-    it "returns the sum of its two arguments" do
-      calc = Calculator.new
-      expect(calc.add(5, 10)).to eq(15)
-    end
-
-    it "returns the sum of two different arguments" do
-      calc = Calculator.new
-      expect(calc.add(1, 2)).to eq(3)
-    end
+RSpec.describe Person do
+  describe "#full_name" do
+    it "concatenates first name, middle name, and last name with spaces"
+    it "does not add extra spaces if middle name is missing"
   end
 
-  describe "#factorial" do
-    it "returns 1 when given 0" do
-      clac = Calculator.new
-      expect(calc.factorial(0)).to eq(1)
-    end
+  describe "#full_name_with_middle_initial"
 
-    it "returns 120 when given 5" do
-      calc = Calculator.new
-      expect(calc.factorial(5)).to eq(120)
-    end
-  end
+  describe "#initials"
 end
