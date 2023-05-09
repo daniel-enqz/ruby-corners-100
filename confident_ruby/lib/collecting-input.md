@@ -118,8 +118,7 @@ def issue_service_award(employee_address, hire_date, award_date)
   issue_gift_card(address: employee_address, amount: 10 * years_employed)
 end
 ```
-
-This is great because we the first we are seeing on methods or clases, is a precondtion statement, which serves to know the expected type.
+This is great because we the first we are seeing on methods or clases, is a precondtion statement, which serves to know the expected type.<br>
 
 6.- Use #fetch to assert the presence of Hash keys.
 > This one was one of my favourite ones in the book, when we are sending a hash to a method, there are multiple ways in which we can check for existent and non existent keys.
