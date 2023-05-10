@@ -38,6 +38,8 @@ describe "#promote_to_admin" do
 end
 ```
 
+> Tests should help us with refactoring as the initial intend of our code will remian the same. We will avoid risky regressions! 💪
+
 Dont's:
 - Avoid over testing
 - Avoid to much rspec syntax, use it if necessary. Tests should be meaningfull for our code and readers.
