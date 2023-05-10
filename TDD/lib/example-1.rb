@@ -1,3 +1,4 @@
+# TDD is a process, we wrote the failing test "add", make it pass and then refactor.
 ```ruby
 require "rspec/autorun"
 
