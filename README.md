@@ -9,9 +9,9 @@ In order to understand the corners of both enviorments better and to be able to 
 ## Index
 
 ### Ruby:
-- [Exceptional Ruby (Undertsand exceptions in Ruby)](https://github.com/daniel-enqz/exceptional-ruby/tree/master/exeptional_ruby)
-- [Confident Ruby (Writing clean code and vulding better ruby software)](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby)
-- [Eloquent Ruby](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby)
+- [Exceptional Ruby (Undertsand exceptions in Ruby)](https://github.com/daniel-enqz/Ruby/exceptional-ruby/tree/master/Ruby/exeptional_ruby)
+- [Confident Ruby (Writing clean code and vulding better ruby software)](https://github.com/daniel-enqz/ruby-corners-100/tree/master/Ruby/confident_ruby)
+- [Eloquent Ruby](https://github.com/daniel-enqz/ruby-corners-100/tree/master/Ruby/confident_ruby)
 
 ### TDD:
 - [Fundamentals](https://github.com/daniel-enqz/exceptional-ruby/tree/master/TDD)

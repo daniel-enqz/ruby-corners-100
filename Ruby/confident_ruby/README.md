@@ -33,7 +33,7 @@ For intsance, lets take a look at the next example which actually looks everwhel
 2. Determining the roles which make sense to receive those messages; and finally...
 3. Bridging the gap between the roles we've identified and the objects which actually exist in the system.
 
-I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/identifying-messages.md), please check it to undertsand this step better 👌
+I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-100/blob/master/Ruby/confident_ruby/lib/identifying-messages.md), please check it to undertsand this step better 👌
 
 # 2. Collecting input:
 > Now that we know how the core system of our methods can be structured, lets take a look at the actual first step of our list.
@@ -43,11 +43,11 @@ Collecting input isn't just about finding needed inputs—it's about determining
 > Methods may be dominated by handling for edge cases. This is hardly confident code.
 
 ### The goal is mapping the roles we need with the objects we have in our system.
-I added more info in [this file](https://github.com/daniel-enqz/ruby-corners-100/tree/master/confident_ruby/lib/inputs.md), please check it to undertsand this step better 👌
+I added more info in [this file](https://github.com/daniel-enqz/ruby-corners-100/tree/master/Ruby/confident_ruby/lib/inputs.md), please check it to undertsand this step better 👌
 
 ## Whow can we do a better input collection?
 
-I choose the top 10 approaches that were more intresting for me from the book and put them [here](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/collecting-input.md), clear descriptions and code examples can also be found there 🪴
+I choose the top 10 approaches that were more intresting for me from the book and put them [here](https://github.com/daniel-enqz/ruby-corners-100/blob/master/Ruby/confident_ruby/lib/collecting-input.md), clear descriptions and code examples can also be found there 🪴
 
 # 3. Delivering Output
 > _"We should also ensure that our outputs make it easy for the clients of our code to be written in a confident style as well."_
@@ -82,7 +82,7 @@ end
 nil is the worst possible representation of a failure: it carries no meaning but can still break things, a workable but semantically blank object—such as an empty string—may be the most appropriate result. 
 
 4.- Represent failure with a special case object
-We show a clear example in ["Collecting Input"](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/collecting-input.md) point 7
+We show a clear example in ["Collecting Input"](https://github.com/daniel-enqz/ruby-corners-100/blob/master/Ruby/confident_ruby/lib/collecting-input.md) point 7
 
 5.- Returning special case obkjects for readiness.
 > Command-query separation (CQS). CQS is a simplifying principle of OO design which advises us to write methods which either have side effects (commands), or return values (queries), but never both.
