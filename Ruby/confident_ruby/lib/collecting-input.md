@@ -5,7 +5,7 @@ Here some cool examples:
 
 <img src="https://user-images.githubusercontent.com/72522628/236654936-0063fce5-a949-4690-855f-4cb7ba33ec6f.jpg" alt="kublau" width="600" height="300">
 
-I added some examples of the difference bewteen explicit and implict methods [here](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/built-in-methods.md).
+I added some examples of the difference bewteen explicit and implict methods [here](https://github.com/daniel-enqz/ruby-corners-100/blob/master/Ruby/confident_ruby/lib/built-in-methods.md).
 
 > The key to working productively in an object-oriented language is to make the type system and polymorphic method dispatch do your work for you.
 
@@ -79,7 +79,7 @@ Imagine we are working on a Traffic Light system,where we can initialize new obj
 TrafficLight.new("green")
 ```
 The problem is that we can ran into syntax errors, or non existent colors, etc. 
-Also each color may have different behaviours, I added a code example [here](https://github.com/daniel-enqz/ruby-corners-100/blob/master/confident_ruby/lib/traffic-light.md) that show us how to take advantage of polymorphism and Dependency Inversion Principle.
+Also each color may have different behaviours, I added a code example [here](https://github.com/daniel-enqz/ruby-corners-100/blob/master/Ruby/confident_ruby/lib/traffic-light.md) that show us how to take advantage of polymorphism and Dependency Inversion Principle.
 
 
 5.- Reject unworkable values with preconditions
