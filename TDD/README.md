@@ -55,4 +55,6 @@ Exercises:
 > They will test a specific part of your code. Like a class or method.
 
 ## 👆Integration Tests:
-> They will test that a different parts of the application work together. They can also drive the writing of unit tests. 
+> They will test that a different parts of the application work together. They can also drive the writing of unit tests.
+
+### As steps in your integration tests fail, that can point you toward the units that need to be built to build the feature. 
