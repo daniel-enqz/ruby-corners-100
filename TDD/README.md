@@ -61,6 +61,7 @@ Exercises:
 If you check the - [Conversion Exercise](https://github.com/daniel-enqz/ruby-corners-100/blob/master/TDD/lib/ex-2.rb). You will note we developed an integration test to confirm that the collaboration between UnitConverter and UnitDatabase. (Both of this containing UnitTests 👀)
 
 Some important rules:
+- Integration tests have a higher cost (developing, longest to run)
 - It's often best to write tests that use actual collaborators and exercise them to ensure that the interfaces between components (the "glue" that holds them together) works as expected.
 - It's important to ensure that your tests don't leave behind state that might break later tests (or test suite runs).
 One way of ensuring that tests get cleaned up is to use an ensure statement to execute the test teardown step.
