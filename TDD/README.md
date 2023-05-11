@@ -51,4 +51,10 @@ Exercises:
 - [More complex exercise](https://github.com/daniel-enqz/ruby-corners-100/blob/master/TDD/lib/ex-2.rb) for testing Conversions (Exception test here 👀)
 
 # Integration vs. Unit Tests
+## 👆Unit Tests:
+> They will test a specific part of your code. Like a class or method.
+
+## 👆Integration Tests:
+> They will test that a different parts of the application work together.
+
 
