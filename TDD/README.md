@@ -38,3 +38,15 @@ describe "#promote_to_admin" do
 end
 ```
 
+> Tests should help us with refactoring as the initial intend of our code will remian the same. We will avoid risky regressions! 💪
+
+Dont's:
+- Avoid over testing
+- Avoid to much rspec syntax, use it if necessary. Tests should be meaningfull for our code and readers.
+- Do not test private methods, as those will not be directly called by users
+- Rather than try to solve all the failures at once, it's better to focus on a single test failure, and write the code that makes the spec pass. (Remember you can block tests from running with `xit`)
+
+Exercises:
+- [Cool exercise](https://github.com/daniel-enqz/ruby-corners-100/blob/master/TDD/lib/ex-1.rb) for testing a single Person class that rerturns the name of a person
+- [More complex exercise](https://github.com/daniel-enqz/ruby-corners-100/blob/master/TDD/lib/ex-2.rb) for testing Conversions (Exception test here 👀)
+
