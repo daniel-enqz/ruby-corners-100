@@ -1,3 +1,10 @@
+# 1. We started by adding the UnitTests for the converter method, the TDD process guided us to create the class, constructor, converter method.
+# 2. We created a test that expected the converted method to correctly do the conversion in different dimensions.
+# 3. We then refactor our method to be more readable.
+# 4. We then decided to enhance our code and make it possible of managing same dimension conversion.
+
+
+
 require "rspec/autorun"
 require "pry"
 

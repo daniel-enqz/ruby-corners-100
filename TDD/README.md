@@ -50,3 +50,82 @@ Exercises:
 - [Cool exercise](https://github.com/daniel-enqz/ruby-corners-100/blob/master/TDD/lib/ex-1.rb) for testing a single Person class that rerturns the name of a person
 - [More complex exercise](https://github.com/daniel-enqz/ruby-corners-100/blob/master/TDD/lib/ex-2.rb) for testing Conversions (Exception test here 👀)
 
+# Integration vs. Unit Tests
+## ⛰️Unit Tests:
+> They will test a specific part of your code. Like a class or method.
+
+- Remember to use doubles!!!
+  - They help you isolate the code you're testing by replacing its dependencies with lightweight, controllable alternatives. 
+  - Dependency injection is a technique used to provide an object with its dependencies, rather than having the object create or fetch them itself.
+Here's a cool example of a double in a Unit Test from the UnitConvertor exercise.
+```ruby
+describe UnitConverter do 
+  describe "#convert" do
+    it "translates between objects of the same dimension" do
+      cups = Quantity.new(amount: 2, unit: :cup)
+      conversion_database = double(conversion_ratio: 0.236589)
+      converter = UnitConverter.new(cups, :liter, conversion database)
+      result = converter. convert
+      expect (result.amount). to be_within (0.001).of (0.473176)
+      expect (result.unit).to eq(:liter)
+    end 
+  end
+end
+```
+
+👆 As you can see 👀, a double is created with the name conversion_database, and it's given a method called conversion_ratio that returns a fixed value of 0.236589. This double replaces the actual conversion_database object, allowing the test to control its behavior and return values. So we are not actually accessing database!!!
+
+### So when to use doubles? 🤔
+Doubles are more commonly used in unit tests rather than integration tests. The reason for this is that unit tests aim to isolate the specific piece of code being tested, so using doubles allows you to replace external dependencies, ensuring that the test focuses solely on the functionality of the code in question.
+
+## 🏔️Integration(Feature) Tests:
+> They will test that a different parts of the application work together. They can also drive the writing of unit tests.
+
+### As steps in your integration tests fail, that can point you toward the units that need to be built to build the feature. 
+If you check the - [Conversion Exercise](https://github.com/daniel-enqz/ruby-corners-100/blob/master/TDD/lib/ex-2.rb). You will note we developed an integration test to confirm that the collaboration between UnitConverter and UnitDatabase. (Both of this containing UnitTests 👀)
+
+In that exercise we also explain the process we did to create our Converter (Following TDD practices of course 👌)
+
+Some important rules:
+- Integration tests have a higher cost (developing, longest to run)
+- They rely in multiple components (controllers, views, models etc.)
+- It's often best to write tests that use actual collaborators and exercise them to ensure that the interfaces between components (the "glue" that holds them together) works as expected.
+- It's important to ensure that your tests don't leave behind state that might break later tests (or test suite runs).
+One way of ensuring that tests get cleaned up is to use an ensure statement to execute the test teardown step.
+
+```ruby
+begin
+  result = converter.convert
+
+  expect(result.amount).to be_within(0.001).of(1)
+  expect(result.unit).to eq(:pint)
+ensure
+  File.delete(database_filename)
+end
+```
+
+Another way of ensuring something is like this (Makes or code more DRY):
+
+```ruby
+around do |example|
+  begin
+    example.run
+  ensure
+    file.delete(database_filename)
+  end
+end
+```
+
+Check [this page](https://thoughtbot.com/upcase/videos/going-further-with-tdd) for more resources on testing.
+
+
+
+
+
+
+
+
+
+
+
+
