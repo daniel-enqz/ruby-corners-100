@@ -1,4 +1,5 @@
 require "rspec/autorun"
+require "pry"
 
 DimensionalMismatchError = Class.new(StandardError)
 
@@ -34,7 +35,10 @@ class UnitConverter
   }
 
   def conversion_factor(from:, to:)
-    CONVERSION_FACTORS[from][to]
+    dimension = CONVERSION_FACTORS.keys.find do |key|
+      CONVERSION_FACTORS[key].keys.include?(from) && CONVERSION_FACTORS[key].keys.include?(to)
+    end
+    CONVERSION_FACTORS[dimension][to] / CONVERSION_FACTORS[dimension][from]
   end
 end
 
