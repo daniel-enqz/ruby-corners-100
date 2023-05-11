@@ -14,6 +14,7 @@ class UnitConverter
   def convert
     begin
       conversion = @initial_quantity.amount * conversion_factor(from: @initial_quantity.unit, to: @unit_to).truncate(4)
+      binding.pry   
       Quantity.new(conversion, @unit_to)
     rescue
       raise DimensionalMismatchError, "Can't convert from #{@initial_quantity.unit} to #{@unit_to}!"
@@ -30,7 +31,6 @@ class UnitConverter
     },
     gram: {
       gram: 1,
-      liter: 1000,
     }
   }
 
