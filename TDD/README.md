@@ -58,3 +58,20 @@ Exercises:
 > They will test that a different parts of the application work together. They can also drive the writing of unit tests.
 
 ### As steps in your integration tests fail, that can point you toward the units that need to be built to build the feature. 
+If you check the - [Conversion Exercise](https://github.com/daniel-enqz/ruby-corners-100/blob/master/TDD/lib/ex-2.rb). You will note we developed an integration test to confirm that the collaboration between UnitConverter and UnitDatabase. (Both of this containing UnitTests 👀)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
