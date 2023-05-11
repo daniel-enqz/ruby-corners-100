@@ -50,3 +50,5 @@ Exercises:
 - [Cool exercise](https://github.com/daniel-enqz/ruby-corners-100/blob/master/TDD/lib/ex-1.rb) for testing a single Person class that rerturns the name of a person
 - [More complex exercise](https://github.com/daniel-enqz/ruby-corners-100/blob/master/TDD/lib/ex-2.rb) for testing Conversions (Exception test here 👀)
 
+# Integration vs. Unit Tests
+
