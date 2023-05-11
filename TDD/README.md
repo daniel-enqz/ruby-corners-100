@@ -75,6 +75,9 @@ end
 
 👆 As you can see 👀, a double is created with the name conversion_database, and it's given a method called conversion_ratio that returns a fixed value of 0.236589. This double replaces the actual conversion_database object, allowing the test to control its behavior and return values. So we are not actually accessing database!!!
 
+### So when to use doubles? 🤔
+Doubles are more commonly used in unit tests rather than integration tests. The reason for this is that unit tests aim to isolate the specific piece of code being tested, so using doubles allows you to replace external dependencies, ensuring that the test focuses solely on the functionality of the code in question.
+
 ## 🏔️Integration(Feature) Tests:
 > They will test that a different parts of the application work together. They can also drive the writing of unit tests.
 
