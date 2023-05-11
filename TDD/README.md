@@ -78,6 +78,19 @@ ensure
 end
 ```
 
+Another way of ensuring something is like this (Makes or code more DRY):
+
+```ruby
+around do |example|
+  begin
+    example.run
+  ensure
+    file.delete(database_filename)
+  end
+end
+```
+
+
 In that exercise we also explain the process we did to create our Converter (Following TDD practices of course 👌)
 
 
