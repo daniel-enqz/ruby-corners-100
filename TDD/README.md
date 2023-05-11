@@ -51,7 +51,7 @@ Exercises:
 - [More complex exercise](https://github.com/daniel-enqz/ruby-corners-100/blob/master/TDD/lib/ex-2.rb) for testing Conversions (Exception test here 👀)
 
 # Integration vs. Unit Tests
-## 👆Unit Tests:
+## ⛰️Unit Tests:
 > They will test a specific part of your code. Like a class or method.
 
 - Remember to use doubles!!!
@@ -75,7 +75,7 @@ end
 
 👆 As you can see 👀, a double is created with the name conversion_database, and it's given a method called conversion_ratio that returns a fixed value of 0.236589. This double replaces the actual conversion_database object, allowing the test to control its behavior and return values. So we are not actually accessing database!!!
 
-## 👆Integration(Feature) Tests:
+## 🏔️Integration(Feature) Tests:
 > They will test that a different parts of the application work together. They can also drive the writing of unit tests.
 
 ### As steps in your integration tests fail, that can point you toward the units that need to be built to build the feature. 
