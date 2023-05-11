@@ -60,6 +60,22 @@ Exercises:
 ### As steps in your integration tests fail, that can point you toward the units that need to be built to build the feature. 
 If you check the - [Conversion Exercise](https://github.com/daniel-enqz/ruby-corners-100/blob/master/TDD/lib/ex-2.rb). You will note we developed an integration test to confirm that the collaboration between UnitConverter and UnitDatabase. (Both of this containing UnitTests 👀)
 
+Some important rules:
+- It's often best to write tests that use actual collaborators and exercise them to ensure that the interfaces between components (the "glue" that holds them together) works as expected.
+- It's important to ensure that your tests don't leave behind state that might break later tests (or test suite runs).
+One way of ensuring that tests get cleaned up is to use an ensure statement to execute the test teardown step.
+
+```ruby
+begin
+  result = converter.convert
+
+  expect(result.amount).to be_within(0.001).of(1)
+  expect(result.unit).to eq(:pint)
+ensure
+  File.delete(database_filename)
+end
+```
+
 In that exercise we also explain the process we did to create our Converter (Following TDD practices of course 👌)
 
 
