@@ -54,6 +54,27 @@ Exercises:
 ## 👆Unit Tests:
 > They will test a specific part of your code. Like a class or method.
 
+- Remember to use doubles!!!
+  - They help you isolate the code you're testing by replacing its dependencies with lightweight, controllable alternatives. 
+  - Dependency injection is a technique used to provide an object with its dependencies, rather than having the object create or fetch them itself.
+Here's a cool example of a double in a Unit Test from the UnitConvertor exercise.
+```ruby
+describe UnitConverter do 
+  describe "#convert" do
+    it "translates between objects of the same dimension" do
+      cups = Quantity.new(amount: 2, unit: :cup)
+      conversion_database = double(conversion_ratio: 0.236589)
+      converter = UnitConverter.new(cups, :liter, conversion database)
+      result = converter. convert
+      expect (result.amount). to be_within (0.001).of (0.473176)
+      expect (result.unit).to eq(:liter)
+    end 
+  end
+end
+```
+
+👆 As you can see 👀, a double is created with the name conversion_database, and it's given a method called conversion_ratio that returns a fixed value of 0.236589. This double replaces the actual conversion_database object, allowing the test to control its behavior and return values. So we are not actually accessing database!!!
+
 ## 👆Integration(Feature) Tests:
 > They will test that a different parts of the application work together. They can also drive the writing of unit tests.
 
@@ -64,9 +85,6 @@ Some important rules:
 - Integration tests have a higher cost (developing, longest to run)
 - They rely in multiple components (controllers, views, models etc.)
 - It's often best to write tests that use actual collaborators and exercise them to ensure that the interfaces between components (the "glue" that holds them together) works as expected.
-- Remember to use doubles!!!
-  - They help you isolate the code you're testing by replacing its dependencies with lightweight, controllable alternatives. 
-  - Dependency injection is a technique used to provide an object with its dependencies, rather than having the object create or fetch them itself. 
 - It's important to ensure that your tests don't leave behind state that might break later tests (or test suite runs).
 One way of ensuring that tests get cleaned up is to use an ensure statement to execute the test teardown step.
 
