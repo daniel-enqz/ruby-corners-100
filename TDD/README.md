@@ -116,6 +116,7 @@ around do |example|
 end
 ```
 
+Check [this page](https://thoughtbot.com/upcase/videos/going-further-with-tdd) for more resources on testing.
 
 
 
