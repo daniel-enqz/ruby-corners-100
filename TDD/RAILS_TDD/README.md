@@ -20,7 +20,7 @@ It was a simple Rails app but usefull for practicing TDD, we also made use of su
 
 ![Screenshot 2023-05-12 at 11 54 53](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/8bfe255a-8fba-40f7-9269-ba892a687e56)
 
-As you can see we are using some helper methos like sign_in, create_todo, display_todo. They help us to avoid repeating code and making it more dynamic.
+As you can see we are using some helper methos like sign_in, create_todo, display_todo and a databse cleaner configuration. They help us to avoid repeating code, making it more dynamic and avoid incidences.
 
 ![Screenshot 2023-05-12 at 11 53 47](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/73182961-00b4-4a6b-b860-3415aae1bd8c)
 ![Screenshot 2023-05-12 at 11 54 09](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/b7507134-06f0-437f-a1c7-8bd7be7d7fd5)
