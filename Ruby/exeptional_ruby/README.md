@@ -234,7 +234,7 @@ at_exit do
 end
 ```
 
-The code inside the at_exit block checks the special global variable $!, which is set to the last exception that was raised in the program. If $! is not nil, it means an exception was raised and not fully handled, which might be why the program is exiting. In such a case, the code logs the details of the exception to a file named crash.log.
+The code inside the at_exit block checks the special global variable `$!`, which is set to the last exception that was raised in the program. If `$!` is not nil, it means an exception was raised and not fully handled, which might be why the program is exiting. In such a case, the code logs the details of the exception to a file named crash.log.
 
 # RESPONDING TO FALIURES
 > If a faliure isn't a major one, consider adding a nil value in rescue block:
