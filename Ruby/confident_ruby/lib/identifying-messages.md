@@ -12,6 +12,7 @@ PSEUDOCODE:
 5. Notify the customer of the new location where they can download their files and update their account info.
 6. Log the successful import of the purchase record.
 
+---
 
 1. We must identify the messages we want to send in order to accomplish the task at hand. (This is mostly like based on pseudocode, do something like:)
 
