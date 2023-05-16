@@ -84,7 +84,7 @@ nil is the worst possible representation of a failure: it carries no meaning but
 4.- Represent failure with a special case object
 We show a clear example in ["Collecting Input"](https://github.com/daniel-enqz/ruby-corners-100/blob/master/Ruby/confident_ruby/lib/collecting-input.md) point 7
 
-5.- Returning special case obkjects for readiness.
+5.- Returning special case objects for readiness.
 > Command-query separation (CQS). CQS is a simplifying principle of OO design which advises us to write methods which either have side effects (commands), or return values (queries), but never both.
 The next is a good example because its clear we are usuing the status object we created, and readiness as well as more customization is enhanced.
 
