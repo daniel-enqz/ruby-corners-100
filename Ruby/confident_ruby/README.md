@@ -40,6 +40,8 @@ I added an example in [this file](https://github.com/daniel-enqz/ruby-corners-10
 
 Collecting input isn't just about finding needed inputs—it's about determining how lenient to be in accepting many types of input, and about whether to adapt the method's logic to suit the received collaborator types, or vice-versa.
 
+[What about explicit and implicit methos? 🤔](https://github.com/daniel-enqz/ruby-corners-100/blob/master/Ruby/confident_ruby/lib/built-in-methods.md)
+
 > Methods may be dominated by handling for edge cases. This is hardly confident code.
 
 ### The goal is mapping the roles we need with the objects we have in our system.
