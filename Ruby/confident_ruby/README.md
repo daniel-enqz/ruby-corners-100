@@ -8,7 +8,7 @@ The next insights are insipred by the book:
 Confindent Ruby by Avdi Grimm. 
 ---
 
-> A single method is like a page in that story. And unfortunately, a lot of methods are just as convoluted, equivocal, and confusing as that made-up page above.
+> A single method is like a page in that story. And unfortunately, a lot of methods are just as convoluted, equivocal, and confusing.
 
 > Method construction and object design are not two independent disciplines. They are more like a dance, where each partner's movements influence the other's. The system's object design is reflected down into methods, and method construction in turn can be reflected up to the larger design.
 
