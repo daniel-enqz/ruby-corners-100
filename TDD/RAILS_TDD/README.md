@@ -5,6 +5,7 @@
 - [Testing in Rails by Josh Steiner](https://github.com/daniel-enqz/dotfiles/blob/main/README.md#-everything-starts-with-startupsh)
 
 <br>
+
 ### Why testing?
 
 - We test because we want something to behave the way it expects.
