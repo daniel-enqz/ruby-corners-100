@@ -12,7 +12,7 @@ https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD
 
 - We test because we want something to behave the way it expects.
 - Tests act as documentation, they tell us a story of our code.
-- They should help us (give us confidence) to refactor and extend the code.
+- They should help us (give us confidence) to refactor and extend the code. They avoid regressions.
 
 ## TODO APP EXERCISE IN RAILS
 Here's a finished exercise creating a todo test with integration and unit tests.
