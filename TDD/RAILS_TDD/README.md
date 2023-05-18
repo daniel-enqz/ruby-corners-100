@@ -79,7 +79,19 @@ And I fill in m....
 And I click "Submit"
 ```
 The important thing is to notice how we are sayig `As a user`, we could also specify we are an unauthenticated user, an admin, a coach or player.
-> Remember that when wtriting a test we need to focus on [telling a story](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/README.md#these-are-the-4-parts-each-test-should-have) with out test.
+> Remember that when wtriting a test we need to focus on [telling a story with 4 Phase Test Patter](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/README.md#these-are-the-4-parts-each-test-should-have) with out test.
+
+```ruby
+test do 
+ setup
+
+ exercise 
+
+ verify 
+
+ teardown
+end
+
 
 ```ruby
 # spec/features/user_submits_a_link_spec.rb
