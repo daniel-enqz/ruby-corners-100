@@ -91,7 +91,7 @@ test do
 
  teardown
 end
-
+```
 
 ```ruby
 # spec/features/user_submits_a_link_spec.rb
