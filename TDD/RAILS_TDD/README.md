@@ -117,10 +117,11 @@ Things to note:
 - For writing assertions, please refer to [rspec-expectations](https://github.com/rspec/rspec-expectations)
 
 We can continue doing TDD in our links app by adding cluases for invalid links, where of course we will not need to do all the simulation of a user creating a link again, we could just use factory girl to create our link. We allready know thats testes somewhere else:
+> TIP: In factory bot remember to use only required data, to avoid having objects with unecessary extra data when testing.
 
 ```ruby
 # spec/factories.rb
-FactoryGirl.define do 
+FactoryBot.define do 
  factory :link do
   title "Testing Rails"
   url "http://testingrailsbook.com" 
