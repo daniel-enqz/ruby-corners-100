@@ -132,3 +132,9 @@ link = create(:link)
 
 # Or override the title
 link = create(:link, title: "TDD isn't Dead!")
+```
+
+As we did with pur first TODO APP practice example, we need to load files under the support folder.
+In your rails_helper you’ll find some commented out code that requires all of the files in  spec/support. Let’s comment that in so our FactoryBot config gets loaded:
+# Uncomment me!
+Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
