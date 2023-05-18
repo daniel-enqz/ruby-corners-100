@@ -1,8 +1,8 @@
 # TESTING IN RAILS 🧶
 
-> Index
-> [Todo app exercise]()
-> [Testing in Rails by Josh Steiner]()
+> Index<br>
+> [Todo app exercise]()<br>
+> [Testing in Rails by Josh Steiner]()<br>
 
 - We test because we want something to behave the way it expects.
 - Tests act as documentation, they tell us a story of our code.
