@@ -1,8 +1,10 @@
 # TESTING IN RAILS 🧶
 
 *Index*
-- [Todo app exercise](https://github.com/daniel-enqz/dotfiles/blob/main/README.md#-everything-starts-with-startupsh)
+- [Todo app exercise](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#Todo-app-exercise)
 - [Testing in Rails by Josh Steiner](https://github.com/daniel-enqz/dotfiles/blob/main/README.md#-everything-starts-with-startupsh)
+
+https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD
 
 <br>
 
