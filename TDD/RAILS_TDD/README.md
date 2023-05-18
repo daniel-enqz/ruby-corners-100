@@ -68,7 +68,8 @@ In our projects we will ned high level integration tests that check for general 
 
 <img src="https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/91cc3335-13ba-4735-8774-ddc8ce38eb69" alt="kublau" width="500" height="400">
 
-## Defining the user:
+## Example doing a link rails app:
+### Defining the user:
 - When doing a feature/integration test, we often need to specify the target user who will experience the feature, so our psuedocode will look something like:
 ```
 As a user
@@ -114,3 +115,20 @@ Things to note:
 - In this case, `#expect` it’s taking the page object, which is a value provided by Capybara that gives access to the currently loaded page. To run the assertion, you call `#to` on the return value of `#expect` and pass it a matcher.
 - The matcher we’ve passed here is #have_link. #have_link comes from Capybara, and returns true if it finds a link with the given text on the page.
 - For writing assertions, please refer to [rspec-expectations](https://github.com/rspec/rspec-expectations)
+
+We can continue doing TDD in our links app by adding cluases for invalid links, where of course we will not need to do all the simulation of a user creating a link again, we could just use factory girl to create our link. We allready know thats testes somewhere else:
+
+```ruby
+# spec/factories.rb
+FactoryGirl.define do 
+ factory :link do
+  title "Testing Rails"
+  url "http://testingrailsbook.com" 
+  end
+end
+
+# In your test
+link = create(:link)
+
+# Or override the title
+link = create(:link, title: "TDD isn't Dead!")
