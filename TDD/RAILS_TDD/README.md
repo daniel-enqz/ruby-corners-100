@@ -1,5 +1,9 @@
 # TESTING IN RAILS 🧶
 
+> Index
+> [Todo app exercise]()
+> [Testing in Rails by Josh Steiner]()
+
 - We test because we want something to behave the way it expects.
 - Tests act as documentation, they tell us a story of our code.
 - They should help us (give us confidence) to refactor and extend the code.
@@ -33,5 +37,7 @@ Unit tests were also added for the todo model:
 
 
 ### This was a good exercise to practice unit and integration(feature) tests, please feel free to check the [repo](https://github.com/daniel-enqz/rails_tdd).
+
+---
 
 ## TESTING IN RAILS BY Josh Steiner
