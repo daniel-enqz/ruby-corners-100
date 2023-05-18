@@ -139,3 +139,22 @@ As we did with pur first TODO APP practice example, we need to load files under 
 In your rails_helper you’ll find some commented out code that requires all of the files in  spec/support. Let’s comment that in so our FactoryBot config gets loaded:
 
 `Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }`
+
+## Important aspects about `have_css`:
+> We also did this example in our Todo app, you can check at the begining of this documentation. I only want to highlight the data attribute: `[data-role=score]`.
+- We’ll frequently use data-roles to decouple our test logic from our presentation logic. 
+- This way, we can change class names and tags without breaking our tests!
+
+```ruby
+# spec/features/user_upvotes_a_link_spec.rb
+RSpec.feature "User upvotes a link" do 
+ scenario "they see an increased score" do
+  link = create(:link)
+  visit root_path
+  within "#link_#{link.id}" do 
+   click_on "Upvote"
+  end
+  expect(page).to have_css "#link_#{link.id} [data-role=score]", text: "1" 
+ end
+end
+```
