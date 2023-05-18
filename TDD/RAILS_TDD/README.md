@@ -66,6 +66,6 @@ When working wih rspec, which is a DSL which makes writing tests readable and un
 
 In our projects we will ned high level integration tests that check for general functionality of the app, several intermediate-level tests that cover a sub-system in more detail, and many unit tests to cover the nitty-gritty details of each component.
 
-![Screenshot 2023-05-18 at 13 44 31](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/91cc3335-13ba-4735-8774-ddc8ce38eb69)
+<img src="https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/91cc3335-13ba-4735-8774-ddc8ce38eb69" alt="kublau" width="500" height="500">
 
 
