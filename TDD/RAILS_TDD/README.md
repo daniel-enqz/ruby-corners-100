@@ -95,6 +95,6 @@ The important thing is to notice how we are sayig `As a user`, we could also spe
    end
 ```
 
-
+- Rspec.feature, `.feature` is a method that gives us access to capybara methods and test web functionalities.
 - See how we are using Capybara methods such as `fill_in`, `click_on`, `submit`.
 - For writing assertions, please refer to [rspec-expectations](https://github.com/rspec/rspec-expectations)
