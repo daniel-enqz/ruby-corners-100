@@ -14,7 +14,7 @@ Benefits:
 
 Tests should be readble, here theres a battle with DRY code, sometimes in testing we will put in a pedestal "telling a good story".
 
-This are the 4 parts each test should have:
+### These are the 4 parts each test should have:
 
 1. Setup - get the conditions correct for the test
 2. Exercise - perform the thing that you're testing
