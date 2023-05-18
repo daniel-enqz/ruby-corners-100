@@ -78,5 +78,5 @@ And I fill in m....
 [...]
 And I click "Submit"
 ```
-  The important thing is to notice how we are sayig `As a user`, we could also specify we are an unauthenticated user, an admin, a coach or player.
-
+The important thing is to notice how we are sayig `As a user`, we could also specify we are an unauthenticated user, an admin, a coach or player.
+> Remember that when wtriting a test we need to focus on [telling a story] (https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/README.md#these-are-the-4-parts-each-test-should-have) with out test.
