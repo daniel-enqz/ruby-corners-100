@@ -47,3 +47,11 @@ Unit tests were also added for the todo model:
 ---
 
 ## TESTING IN RAILS BY Josh Steiner
+
+Yes, we have multiple ways of doing TDD in bigger applications:
+
+*Outside-In Development:* It's a method where development begins from the user's perspective, starting from the highest level of abstraction and working inwards, guided by user acceptance tests.
+
+*Inside-Out Development:* This approach involves building software component by component, starting from the smallest pieces and gradually building up to the whole, enabling flexibility and adaptability during development.
+
+
