@@ -60,7 +60,7 @@ Yes, we have multiple ways of doing TDD in bigger applications:
 When working wih rspec, which is a DSL which makes writing tests readable and understandable, we need to know specific files:
 - `.rspec` Configures the default flags that are passed when you run rspec. 
 - `spec/spec_helper.rb` Further customizes how RSpec behaves. Because this is loaded in every test, you can guarantee it will be run when you run a test in isolation.
--  `spec/rails_helper.rb` A specialized helper file that loads Rails and its dependencies.
+-  `spec/rails_helper.rb` A specialized helper file that loads Rails and its dependencies. Like Capybara
 
 *The testing pyramid:*
 
@@ -96,5 +96,5 @@ The important thing is to notice how we are sayig `As a user`, we could also spe
 ```
 
 
-- See how we are using Capybara such as `fill_in`, 
+- See how we are using Capybara methods such as `fill_in`, `click_on`, `submit`.
 - For writing assertions, please refer to [rspec-expectations](https://github.com/rspec/rspec-expectations)
