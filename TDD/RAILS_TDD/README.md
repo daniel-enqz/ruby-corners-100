@@ -80,3 +80,21 @@ And I click "Submit"
 ```
 The important thing is to notice how we are sayig `As a user`, we could also specify we are an unauthenticated user, an admin, a coach or player.
 > Remember that when wtriting a test we need to focus on [telling a story](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/README.md#these-are-the-4-parts-each-test-should-have) with out test.
+
+```ruby
+# spec/features/user_submits_a_link_spec.rb
+  require "rails_helper"
+  RSpec.feature "User submits a link" do
+    scenario "they see the page for the submitted link" do
+      link_title = "This Testing Rails book is awesome!" link_url = "http://testingrailsbook.com"
+      visit root_path
+      click_on "Submit a new link"
+      fill_in "link_title", with: link_title fill_in "link_url", with: link_url click_on "Submit!"
+      expect(page).to have_link link_title, href: link_url
+    end 
+   end
+```
+
+
+- See how we are using Capybara such as `fill_in`, 
+- For writing assertions, please refer to [rspec-expectations](https://github.com/rspec/rspec-expectations)
