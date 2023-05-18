@@ -4,6 +4,8 @@
 - [Todo app exercise](https://github.com/daniel-enqz/dotfiles/blob/main/README.md#-everything-starts-with-startupsh)
 - [Testing in Rails by Josh Steiner](https://github.com/daniel-enqz/dotfiles/blob/main/README.md#-everything-starts-with-startupsh)
 
+<br>
+### Why testing?
 - We test because we want something to behave the way it expects.
 - Tests act as documentation, they tell us a story of our code.
 - They should help us (give us confidence) to refactor and extend the code.
