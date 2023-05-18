@@ -68,4 +68,15 @@ In our projects we will ned high level integration tests that check for general 
 
 <img src="https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/91cc3335-13ba-4735-8774-ddc8ce38eb69" alt="kublau" width="500" height="400">
 
+## Defining the user:
+- When doing a feature/integration test, we often need to specify the target user who will experience the feature, so our psuedocode will look something like:
+```
+As a user
+When I visit the home page
+And I click "Submit a link post"
+And I fill in m....
+[...]
+And I click "Submit"
+```
+  The important thing is to notice how we are sayig `As a user`, we could also specify we are an unauthenticated user, an admin, a coach or player.
 
