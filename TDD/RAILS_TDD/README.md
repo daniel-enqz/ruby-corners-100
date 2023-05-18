@@ -57,3 +57,10 @@ Yes, we have multiple ways of doing TDD in bigger applications:
 *Inside-Out Development:* This approach involves building software component by component, starting from the smallest pieces and gradually building up to the whole, enabling flexibility and adaptability during development.
 
 
+When working wih rspec, which is a DSL which makes writing tests readable and understandable, we need to know specific files:
+- `.rspec` Configures the default flags that are passed when you run rspec. 
+- `spec/spec_helper.rb` Further customizes how RSpec behaves. Because this is loaded in every test, you can guarantee it will be run when you run a test in isolation.
+-  `spec/rails_helper.rb` A specialized helper file that loads Rails and its dependencies.
+
+
+
