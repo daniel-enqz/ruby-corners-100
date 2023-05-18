@@ -98,5 +98,5 @@ The important thing is to notice how we are sayig `As a user`, we could also spe
 Things to note:
 - Rspec.feature, `.feature` is a method that gives us access to capybara methods and test web functionalities.
 - See how we are using Capybara methods such as `fill_in`, `click_on`, `submit`.
-- `#expect` is an RSpec method that will build an assertion. It takes one value, which we will run an assertion against. In this case it’s taking the page object, which is a value provided by Capybara that gives access to the currently loaded page. To run the assertion, you call `#to` on the return value of #expect and pass it a matcher. 
+- `#expect` is an RSpec method that will build an assertion. It takes one value, which we will run an assertion against. In this case it’s taking the page object, which is a value provided by Capybara that gives access to the currently loaded page. To run the assertion, you call `#to` on the return value of `#expect` and pass it a matcher. 
 - For writing assertions, please refer to [rspec-expectations](https://github.com/rspec/rspec-expectations)
