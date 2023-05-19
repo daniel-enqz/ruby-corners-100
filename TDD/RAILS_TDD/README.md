@@ -224,7 +224,7 @@ Associations will be tested at an integration level. So no worth tasting them.
 - Request specs are integration tests that allow you to send a request and make assertions on its response.
 - Request specs should be used to test API design
 
-Testing endpoint of all existing links:
+1. Testing endpoint of all existing links:
 
 First some configuration, as all of our request will be JSON.
 ```ruby
@@ -261,6 +261,42 @@ RSpec.describe "GET /api/v1/links" do
   })
  end 
 end
-
 ```
+
+2. Testing creating a link (POST)
+
+We first add some traits to our factory so that we can create invalid links with: `attributes_for(:link, :invalid)`
+```ruby
+factory :link do
+ title "Testing Rails"
+ url "http://testingrailsbook.com"
+ 
+ trait :invalid do 
+  title nil
+ end 
+end
+```
+
+```ruby
+# spec/requests/api/v1/links_spec.rb
+RSpec.describe "POST /api/v1/links" do 
+ it "creates the link" do
+  link_params = attributes_for(:link) # This is a FactoryBot method that returns a hash like: { title: "Testing Rails", url: "http://testingrailsbook.com" }
+
+  post "/api/v1/links", link: link_params
+
+  expect(response.status).to eq 201
+  expect(Link.last.title).to eq link_params[:title] 
+ end
+ 
+ context "when there are invalid attributes" do 
+  it "returns a 422, with errors" do
+   link_params = attributes_for(:link, :invalid) post "/api/v1/links", link: link_params
+   expect(response.status).to eq 422
+   expect(json_body.fetch("errors")).not_to be_empty 
+  end
+ end 
+end
+```
+
 
