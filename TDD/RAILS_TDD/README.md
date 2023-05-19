@@ -1,5 +1,8 @@
 # TESTING IN RAILS 🧶
 
+- In the next documentation we review some concepts about tasting in Rails.
+- We 2 two exercises, a todo app and a reddit clone, and specify different aspects of testing.
+
 *Index*
 - [Todo app exercise](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#Todo-app-exercise)
 - [Testing in Rails by Josh Steiner](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-in-rails-by-josh-steiner)
