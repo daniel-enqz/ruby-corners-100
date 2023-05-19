@@ -375,3 +375,32 @@ RSpec.describe ApplicationHelper, "#formatted_score_for" do
  end
 end
 ```
+
+## Testing mailers:
+- Mailers are a great example for Outside-in testing. Starting from integration to Unit layer.
+- We start by testing the controller (integration)
+
+```ruby
+# spec/controllers/links_controller_spec.rb
+context "when the link is valid" do
+ it "sends an email to the moderators" do
+  valid_link = double(save: true)
+  allow(Link).to receive(:new).and_return(valid_link) 
+  allow(LinkMailer).to receive(:new_link)
+  
+  post :create, link: { attribute: "value" }
+  
+  expect(LinkMailer).to have_received(:new_link).with(valid_link) 
+ end
+end
+```
+
+- This now forces us to write a new class and method `LinkMailer#new_link.` with  `email-spec gem`
+ - Provides a number of helpful matchers for testing mailers, such as:
+- deliver_to
+- deliver_from
+- have_subject
+- have_body_text
+
+
+
