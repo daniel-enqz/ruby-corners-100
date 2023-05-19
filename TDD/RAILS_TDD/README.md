@@ -323,13 +323,36 @@ RSpec.describe "links/show.html.erb" do
  context "if the url is an image" do 
   it "renders the image inline" do
    link = build(:link, url: "http://example.com/image.jpg") 
-   assign(:link, link)
+   assign(:link, link) # assigns the value of the variable link to the instance variable @link in our rendered view.
    
-   render
+   render # magically infers the vire to render from the describe
    
    expect(rendered).to have_selector "img[src='#{link.url}']" 
   end
  end 
+end
+```
+
+## Controller specs 🤔
+> They aren’t really unit tests because controllers are so tightly coupled to other parts of the Rails infrastructure.
+- Feature specs do cover controllers, controller tests can often be redundant.
+- You don’t need a controller test until you introduce conditional logic to your controller.
+- Use feature specs for happy paths and controller tests for the sad paths.
+
+> The “happy path” is where everything succeeds (e.g. successfully navigating the app and submitting a link) while the “sad path” is where a failure occurs (e.g. suc- cessfully navigating the app but submitting an invalid link).
+
+We are going to test the `if save` logic from the controller, testing the sad path of the record not saving and re-rendering the view
+```ruby
+# spec/controllers/links_controller_spec.rb
+ require "rails_helper"
+ 
+ RSpec.describe LinksController, "#create" do 
+  context "when the link is invalid" do
+   it "re-renders the form" do
+    post :create, link: attributes_for(:link, :invalid)
+    expect(response).to render_template :new 
+   end
+  end 
 end
 ```
 
