@@ -356,4 +356,7 @@ We are going to test the `if save` logic from the controller, testing the sad pa
 end
 ```
 
+### Question that arise.....
+> Is it worth trading a slow and partially duplicated feature spec for a faster controller test that doesn’t test the UI? Would a request spec be a good compromise? What about a controller spec plus a view spec to test the both sides independently?
+
 
