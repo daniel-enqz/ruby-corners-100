@@ -166,6 +166,11 @@ end
 - Instance methods (Upvoting a link and caluclating score)
 
 Note: If we needed a persisted object (for example, if we needed to query for it), we would use .create. .build skips the save.
+How to order model specs:
+- validation tests
+- Class method tests
+- Instance Mtehod tests
+
 ```ruby
 # spec/models/link_spec.rb
 RSpec.describe Link, "#upvote" do 
