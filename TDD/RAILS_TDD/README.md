@@ -219,3 +219,33 @@ end
 
 ## Testing associations 🤔
 Associations will be tested at an integration level. So no worth tasting them.
+
+## Testing Requests:
+- Request specs are integration tests that allow you to send a request and make assertions on its response.
+- Request specs should be used to test API design
+
+Testing endpoint of all existing links
+```ruby
+# spec/requests/api/v1/links_spec.rb
+require "rails_helper"
+
+RSpec.describe "GET /api/v1/links" do
+ it "returns a list of all links, hottest first" do
+  coldest_link = create(:link) 
+  hottest_link = create(:link, upvotes: 2)
+  
+  get "/api/v1/links" 
+  
+  expect(json_body["links"].count).to eq(2)
+  hottest_link_json = json_body["links"][0] 
+  expect(hottest_link_json).to eq({
+   "id" => hottest_link.id, "title" => hottest_link.title,
+   "url" => hottest_link.url,
+   "upvotes" => hottest_link.upvotes, 
+   "downvotes" => hottest_link.downvotes,
+  })
+ end 
+end
+
+```
+
