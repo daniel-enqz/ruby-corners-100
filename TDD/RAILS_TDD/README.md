@@ -203,3 +203,15 @@ RSpec.describe Link, ".hottest_first" do
  end
 end
 ```
+
+## Testing validations:
+- We use a library called shoulda-matchers to test validations. 
+- shoulda-matchers pro- vides matchers for writing single line tests for common Rails functionality.
+
+```ruby
+RSpec.describe Link, "validations" do
+ it { is_expected.to validate_presence_of(:title) } 
+ it { is_expected.to validate_presence_of(:url) } 
+ it { is_expected.to validate_uniqueness_of(:url) }
+end
+```
