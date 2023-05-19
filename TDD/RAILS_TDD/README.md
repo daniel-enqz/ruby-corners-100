@@ -161,3 +161,7 @@ RSpec.feature "User upvotes a link" do
  end
 end
 ```
+## Testing Models (#spec/models/)
+> We prefix instance methods with a `#` and class methods with a `.`.
+- Instacne methods:
+
