@@ -163,7 +163,7 @@ end
 ```
 ## Testing Models (#spec/models/)
 > We prefix instance methods with a `#` and class methods with a `.`.
-- Instance methods (Upvoting a link)
+- Instance methods (Upvoting a link and caluclating score)
 
 Note: If we needed a persisted object (for example, if we needed to query for it), we would use .create. .build skips the save.
 ```ruby
