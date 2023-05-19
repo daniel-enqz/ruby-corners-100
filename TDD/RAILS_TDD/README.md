@@ -224,7 +224,22 @@ Associations will be tested at an integration level. So no worth tasting them.
 - Request specs are integration tests that allow you to send a request and make assertions on its response.
 - Request specs should be used to test API design
 
-Testing endpoint of all existing links
+Testing endpoint of all existing links:
+
+First some configuration, as all of our request will be JSON.
+```ruby
+# spec/support/api_helpers.rb
+module ApiHelpers 
+  def json_body
+   JSON.parse(response.body) 
+  end
+end
+
+RSpec.configure do |config|
+ config.include ApiHelpers, type: :request
+end
+```
+
 ```ruby
 # spec/requests/api/v1/links_spec.rb
 require "rails_helper"
