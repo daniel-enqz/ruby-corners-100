@@ -208,7 +208,7 @@ end
 - We use a library called shoulda-matchers to test validations. 
 - shoulda-matchers pro- vides matchers for writing single line tests for common Rails functionality.
 - Provided by RSpec, is_exepcted is a convenience syntax for expect(subject) 
-- 
+
 ```ruby
 RSpec.describe Link, "validations" do
  it { expect(Link.new).to validate_presence_of(:title) } 
@@ -216,3 +216,6 @@ RSpec.describe Link, "validations" do
  it { is_expected.to validate_uniqueness_of(:url) } # This is the best way to go.
 end
 ```
+
+## Testing associations 🤔
+Associations will be tested at an integration level. So no worth tasting them.
