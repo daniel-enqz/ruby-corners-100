@@ -333,7 +333,7 @@ RSpec.describe "links/show.html.erb" do
 end
 ```
 
-## Controller specs 🤔
+## Testing controller specs 🤔
 > They aren’t really unit tests because controllers are so tightly coupled to other parts of the Rails infrastructure.
 - Feature specs do cover controllers, controller tests can often be redundant.
 - You don’t need a controller test until you introduce conditional logic to your controller.
@@ -359,4 +359,18 @@ end
 ### Question that arise.....
 > Is it worth trading a slow and partially duplicated feature spec for a faster controller test that doesn’t test the UI? Would a request spec be a good compromise? What about a controller spec plus a view spec to test the both sides independently?
 
+## Testing helpers
+> Formatting is not a model-level concern. Instead, we are going to implement it as a helper method.
 
+```ruby
+# spec/helpers/application_helper_spec.rb
+require "rails_helper"
+ RSpec.describe ApplicationHelper, "#formatted_score_for" do 
+  it "displays the net score along with the raw votes" do
+   link = Link.new(upvotes: 7, downvotes: 2) 
+   formatted_score = helper.formatted_score_for(link)
+   
+   expect(formatted_score).to eq "5 (+7, -2)" 
+ end
+end
+```
