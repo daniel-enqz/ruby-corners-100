@@ -165,6 +165,7 @@ end
 > We prefix instance methods with a `#` and class methods with a `.`.
 - Instance methods (Upvoting a link)
 
+Note: If we needed a persisted object (for example, if we needed to query for it), we would use .create. .build skips the save.
 ```ruby
 # spec/models/link_spec.rb
 RSpec.describe Link, "#upvote" do 
