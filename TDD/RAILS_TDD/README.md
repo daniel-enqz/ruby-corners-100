@@ -362,6 +362,7 @@ end
 ## Testing helpers
 > Formatting is not a model-level concern. Instead, we are going to implement it as a helper method.
 
+- Since we don’t need to persist to the database and don’t care about validity, we are using Link.new here instead of FactoryGirl. We need to nake our tests FAST ⚡️
 ```ruby
 # spec/helpers/application_helper_spec.rb
 require "rails_helper"
