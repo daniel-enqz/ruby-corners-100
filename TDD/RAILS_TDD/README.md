@@ -6,8 +6,15 @@
 *Index*
 - [Todo app exercise](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#Todo-app-exercise)
 - [Testing in Rails by Josh Steiner](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-in-rails-by-josh-steiner)
+- [Integration Tests](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#integration-tests)
+- [Testing Models](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-models-(#spec/models/))
+- [Testing Validations](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-validations)
+- [Testing Associations](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-associations)
+- [Testing Requests](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-requests)
+- [Testing Views](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-views)
+- [Testing Controllers](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-controllers)
+- [Testing Mailers](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-mailers)
 
-https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD
 
 <br>
 
@@ -75,7 +82,7 @@ In our projects we will ned high level integration tests that check for general 
 
 - We will explain the tests we did in this project, but please refer to [the project]() to see full implementation.
 
-### Defining the user:
+## Integration Tests:
 - When doing a feature/integration test, we often need to specify the target user who will experience the feature, so our psuedocode will look something like:
 ```
 As a user
@@ -220,7 +227,7 @@ RSpec.describe Link, "validations" do
 end
 ```
 
-## Testing associations 🤔
+## Testing associations:
 Associations will be tested at an integration level. So no worth tasting them.
 
 ## Testing Requests:
@@ -336,7 +343,7 @@ RSpec.describe "links/show.html.erb" do
 end
 ```
 
-## Testing controller specs 🤔
+## Testing controllers:
 > They aren’t really unit tests because controllers are so tightly coupled to other parts of the Rails infrastructure.
 - Feature specs do cover controllers, controller tests can often be redundant.
 - You don’t need a controller test until you introduce conditional logic to your controller.
