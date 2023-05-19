@@ -163,7 +163,7 @@ end
 ```
 ## Testing Models (#spec/models/)
 > We prefix instance methods with a `#` and class methods with a `.`.
-- Instacne methods (Upvoting a link)
+- Instance methods (Upvoting a link)
 
 ```ruby
 # spec/models/link_spec.rb
