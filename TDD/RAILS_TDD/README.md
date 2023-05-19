@@ -71,7 +71,10 @@ In our projects we will ned high level integration tests that check for general 
 
 <img src="https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/91cc3335-13ba-4735-8774-ddc8ce38eb69" alt="kublau" width="500" height="400">
 
-## Example doing a Reddit Clone app:
+## Example doing a Reddit Clone app ([Check it out here!!!]())
+
+- We will explain the tests we did in this project, but please refer to [the project]() to see full implementation.
+
 ### Defining the user:
 - When doing a feature/integration test, we often need to specify the target user who will experience the feature, so our psuedocode will look something like:
 ```
