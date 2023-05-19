@@ -365,8 +365,8 @@ end
 ```ruby
 # spec/helpers/application_helper_spec.rb
 require "rails_helper"
- RSpec.describe ApplicationHelper, "#formatted_score_for" do 
-  it "displays the net score along with the raw votes" do
+RSpec.describe ApplicationHelper, "#formatted_score_for" do 
+ it "displays the net score along with the raw votes" do
    link = Link.new(upvotes: 7, downvotes: 2) 
    formatted_score = helper.formatted_score_for(link)
    
