@@ -163,5 +163,16 @@ end
 ```
 ## Testing Models (#spec/models/)
 > We prefix instance methods with a `#` and class methods with a `.`.
-- Instacne methods:
+- Instacne methods (Upvoting a link)
+
+```ruby
+# spec/models/link_spec.rb
+RSpec.describe Link, "#upvote" do 
+ it "increments upvotes" do
+  link = build(:link, upvotes: 1)
+  link.upvote
+  expect(link.upvotes).to eq 2 
+ end
+end
+```
 
