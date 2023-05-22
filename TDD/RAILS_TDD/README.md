@@ -147,6 +147,22 @@ link = create(:link)
 # Or override the title
 link = create(:link, title: "TDD isn't Dead!")
 ```
+```
+MORE ABOUT FACTOIRES
+# build creates an Article object without saving
+build :article, :unpublished
+
+# build_stubbed creates an Article object and acts as an already saved Article
+build_stubbed :article, :published
+
+# create creates an Article object and saves it to the database
+create :article, :published, :in_the_future
+create :article, :published, :in_the_past
+
+# create_list creates a collection of objects for a given factory
+# you can also use build_list and build_stubbed_list
+create_list :article, 2
+```
 
 As we did with pur first TODO APP practice example, we need to load files under the support folder.
 In your rails_helper you’ll find some commented out code that requires all of the files in  spec/support. Let’s comment that in so our FactoryBot config gets loaded:
