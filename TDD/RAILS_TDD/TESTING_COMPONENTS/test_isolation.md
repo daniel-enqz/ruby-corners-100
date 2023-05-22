@@ -11,3 +11,20 @@ RSpec.describe Score do describe "#upvotes" do
   end
 end
 ```
+
+## Stubbing
+> Look how we are creating a hard-coded class Link, adding a specific behaviour. This is allready tested in other part of the application. So we want to isolate everything else, and making our test fail soley by its definition and context.
+```ruby
+# spec/controllers/links_controller_spec.rb
+require "rails_helper"
+RSpec.describe LinksController, "#create" do 
+  context "when the link is invalid" do
+    it "re-renders the form" do
+      invalid_link = double(save: false)
+      allow(Link).to receive(:new).and_return(invalid_link)
+      post :create, link: { attribute: "value" }
+      expect(response).to render_template :new 
+    end
+  end 
+end
+```
