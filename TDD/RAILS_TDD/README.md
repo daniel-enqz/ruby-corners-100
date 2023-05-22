@@ -56,6 +56,4 @@ Unit tests were also added for the todo model:
 
 ---
 
-Please dive into the next part in which you will see a more detail scenario testing every part of a RAILS APP. 🦆
-
-require "rails_helper"
+Please dive into the [next part](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/TESTING_COMPONENTS) in which you will see a more detail scenario testing every part of a RAILS APP. 🦆
