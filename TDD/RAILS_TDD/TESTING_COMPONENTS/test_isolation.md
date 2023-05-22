@@ -1,4 +1,9 @@
 ### RSpec gives us doubles also known as mock objects, they act as fake collaborators in tests.
+
+"Taking this approach yields several benefits. Because we aren’t using real collab- orators, we can TDD a unit of code even if the collaborators haven’t been written yet.
+Using test doubles gets painful for components that are highly coupled to many collaborators"
+
+
 > Doubles make it easy for us to isolate collaborators that are passed into the object we are testing (the system under test or SUT). 
 
 ```ruby
