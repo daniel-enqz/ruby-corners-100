@@ -14,4 +14,4 @@
 
 ## Interminent Failures:
 - How o find the test thats causing the problem:
-![Screenshot 2023-05-23 at 11 01 54](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/8eb64c07-fb68-402d-b412-eb156495e3ee)
+![Screenshot 2023-05-23 at 11 03 09](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/f489a859-b3b4-40eb-bb78-0f4be8b1e83d)
