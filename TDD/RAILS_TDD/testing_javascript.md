@@ -21,3 +21,21 @@ feature "A user does something" do
   end 
 end
 ```
+
+## Important points:
+1. Remember disabling transactions and use databse cleaner.
+2. When you want to wait for an event to happen. Like opening a modal, avoid this:
+
+```ruby
+# This will return nl. as the modal is still not loaded.
+first(".modal-open").click 
+first(".confirm").click
+```
+Instead, use this:
+
+```ruby
+# this will take a few seconds to open modal
+find(".modal-open").click
+# this will keep trying to find up to two seconds
+find(".confirm").click
+```
