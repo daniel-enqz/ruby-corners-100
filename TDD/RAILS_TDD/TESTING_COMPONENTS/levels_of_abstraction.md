@@ -64,6 +64,68 @@ end
 def have_completed_todo(name) 
   have_css(".todos li.completed", text: name)
 end
+```
 
+# Why not creating page objects?
 
+Do you see what we are doing here?
+```ruby
+scenario "create a new todo" do 
+  sign_in_as "person@example.com" 
+  todo = todo_on_page
+  todo.create expect(todo).to be_visible
+end
+```
 
+```ruby
+scenario "mark completed todo as incomplete" do 
+  sign_in_as "person@example.com"
+  todo = todo_on_page
+  todo.create todo.mark_complete 
+  todo.mark_incomplete
+  expect(todo).not_to be_complete
+end
+```
+
+> Instead of having unique methods, we are creating a whole TodoOnPage object.
+
+```ruby
+class TodoOnPage
+  include Capybara::DSL
+  attr_reader :title
+  
+  def initialize(title) 
+    @title = title
+  end
+  
+  def create
+    click_link "Create a new todo" fill_in "Title", with: title click_button "Create"
+  end
+  
+  def mark_complete
+    todo_element.click_link "Complete"
+  end
+  
+  def mark_incomplete 
+    todo_element.click_link "Incomplete"
+  end
+  
+  def visible?
+    todo_list.has_css? "li", text: title
+  end
+  
+  def complete?
+    todo_list.has_css? "li.complete", text: title
+  end
+  
+  private
+  
+  def todo_element
+    find "li", text: title
+  end
+  
+  def todo_list 
+    find "ol.todos"
+  end 
+end
+```
