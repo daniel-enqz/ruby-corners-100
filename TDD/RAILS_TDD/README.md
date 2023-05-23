@@ -10,6 +10,8 @@
 - [Test Isolation (MokingvsStubbing)](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/test_isolation.md)
 - [Levels of Abstraction](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/levels_of_abstraction.md)
 - [Testing Javascript](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/testing_javascript.md)
+
+SUMMARY OF EVERYTHING WILL BE HERE!!! 👇👇👇
 - [Antipatterns](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/antipatterns.md)
 
 <br>
