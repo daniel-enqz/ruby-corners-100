@@ -29,5 +29,6 @@ feature "User marks todo complete"
 end
 ```
 
-We allredy did this exercise in our first todo app, please check it [here](https://github.com/daniel-enqz/rails_tdd/blob/master/spec/features/user_marks_todo_as_incomplete_spec.rb).
-Let's explain this clearly here!
+We already did this exercise in our first todo app, please check it [here](https://github.com/daniel-enqz/rails_tdd/blob/master/spec/features/user_marks_todo_as_incomplete_spec.rb).
+<br>
+- Let's explain this clearly here!
