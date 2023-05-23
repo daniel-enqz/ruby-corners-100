@@ -1,5 +1,7 @@
 # Antipatterns
 
+It's important to focus on testing the desired behavior rather than specific implementation details, minimize dependencies, use abstraction layers, and employ techniques like test doubles and mocking. Writing tests that are resilient to code changes and environment variations helps maintain a reliable and efficient test suite.
+
 ## Slow tests
 > As applications grow, we will need to be testing more and more stuff. Development can get slow.
 
