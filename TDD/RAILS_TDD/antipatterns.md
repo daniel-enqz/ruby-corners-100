@@ -28,12 +28,13 @@ _* By testing just the inputs and outputs, we can freely change the implementati
 2. Opt for explicit method calls to build and stub necessary objects and dependencies within the test itself. (Avoid let, before, subject)
 3. Extract helper methods.
 4. For feature specs, you may consider using Page Objects to clean up repetitive interactions.
-5. Use data-roles to assert presence.
-6. Trust in  internationalization (i18n), you will only have to change something there, instead of specs and views.
-7. Sometimes it will be necessary to test implementaion in service objects. So stubbing the job and assert it was qued.
-8. Rely on mocking and stubbing. Brittle code comes from coupling. The more coupled your code, the harder it is to make changes without having to update multiple locations in your code. 
-9. When usuing factories, remember to use only what our Model requires.
-10. Reset Global states:
+5. Use raits in factories.
+6. Use data-roles to assert presence.
+7. Trust in  internationalization (i18n), you will only have to change something there, instead of specs and views.
+8. Sometimes it will be necessary to test implementaion in service objects. So stubbing the job and assert it was qued.
+9. Rely on mocking and stubbing. Brittle code comes from coupling. The more coupled your code, the harder it is to make changes without having to update multiple locations in your code. 
+10. When usuing factories, remember to use only what our Model requires.
+11. Reset Global states:
 
 ```ruby
 module EnvHelper
