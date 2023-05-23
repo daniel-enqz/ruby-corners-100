@@ -81,7 +81,8 @@ end
 scenario "mark completed todo as incomplete" do 
   sign_in_as "person@example.com"
   todo = todo_on_page
-  todo.create todo.mark_complete 
+  todo.create 
+  todo.mark_complete 
   todo.mark_incomplete
   expect(todo).not_to be_complete
 end
