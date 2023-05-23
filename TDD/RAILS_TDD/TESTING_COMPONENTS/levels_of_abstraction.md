@@ -33,6 +33,7 @@ We already did this exercise in our first todo app, please check it [here](https
 <br>
 - Let's explain this clearly here!
 
+# Extraction
 We need to focus in high-level of abstarction. Communication and maintainability are the main goal here, code reusability is a side effect.
 
 In the next example we will create methods like, create_todo, mark_complete, have_completed_todo, etc. And put them in our support folder.
