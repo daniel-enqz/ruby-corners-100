@@ -11,3 +11,7 @@
 5. Stub external APIS, do not hit them directly. (You can configure to test the API driectly on CI only)
 6. Delete slow tests that are not cirtical-mission.
 
+
+## Interminent Failures:
+- How o find the test thats causing the problem:
+![Screenshot 2023-05-23 at 11 01 54](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/8eb64c07-fb68-402d-b412-eb156495e3ee)
