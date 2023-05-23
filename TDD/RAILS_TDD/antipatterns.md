@@ -32,7 +32,7 @@ RSpec.configure do |config|
   config.include EnvHelper
 end
 ```
-
+Then in the spec:
 ```ruby
 feature "User views the form setup page", :js do
   scenario "after creating a submission, they see the continue button" do
