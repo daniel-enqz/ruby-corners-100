@@ -21,7 +21,7 @@ It's important to focus on testing the desired behavior rather than specific imp
 1. Remember to use database to mantain clean states in each test
 2. Extract helper methods.
 3. For feature specs, you may consider using Page Objects to clean up repetitive interactions.
-4. Use data-roles
+4. Use data-roles to assert presence
 5. Trust in  international- ization (i18n), you will only have to change something there, instead of specs and views.
 6. Rely on mocking and stubbing. Brittle code comes from coupling. The more coupled your code, the harder it is to make changes without having to update multiple locations in your code. 
 7. Reset Global states:
