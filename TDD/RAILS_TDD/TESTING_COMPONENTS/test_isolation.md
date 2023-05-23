@@ -6,6 +6,7 @@ Using test doubles gets painful for components that are highly coupled to many c
 
 > Doubles make it easy for us to isolate collaborators that are passed into the object we are testing (the system under test or SUT). 
 
+## Mocking
 ```ruby
 require "rails_helper"
 RSpec.describe Score do describe "#upvotes" do
