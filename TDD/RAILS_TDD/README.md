@@ -11,8 +11,6 @@
 - [Levels of Abstraction](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/levels_of_abstraction.md)
 - [Testing Javascript](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/testing_javascript.md)
 
-
-levels_of_abstraction.md
 <br>
 
 ### Why testing?
@@ -20,6 +18,12 @@ levels_of_abstraction.md
 - We test because we want something to behave the way it expects.
 - Tests act as documentation, they tell us a story of our code.
 - They should help us (give us confidence) to refactor and extend the code. They avoid regressions.
+
+> Remember we can use CI|CD to automatically run our tests but that shouldnt replace local testing.
+
+> Furthermore, you want to minimize the Hits / Line. If you are testing the same code path 50+ times, it’s a good sign that you may be over-testing, which could lead to brittle tests. In a perfect world, you’d have 100% coverage and only hit each line a single time.
+
+![Screenshot 2023-05-23 at 10 18 13](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/a52e9105-0016-4615-befc-0ba6a7a29427)
 
 ## TODO APP EXERCISE IN RAILS
 Here's a finished exercise creating a todo test with integration and unit tests.
