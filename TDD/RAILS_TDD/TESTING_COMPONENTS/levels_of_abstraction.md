@@ -37,6 +37,7 @@ We need to focus in high-level of abstarction. Communication and maintainability
 
 In the next example we will create methods like, create_todo, mark_complete, have_completed_todo, etc. And put them in our support folder.
 ```ruby
+#spec/features/link.rb
 feature "User marks todo complete" do 
   scenario "updates todo as completed" do
     sign_in
