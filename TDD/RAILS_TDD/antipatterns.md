@@ -9,4 +9,5 @@
 3. Only persist if necessary. Persisting to the database takes far longer than initializing objects in memory.
 4. Use happy paths for feture specs, do not over complicate adding sad paths. Find a balance in feature specs.
 5. Stub external APIS, do not hit them directly. (You can configure to test the API driectly on CI only)
+6. Delete slow tests that are not cirtical-mission.
 
