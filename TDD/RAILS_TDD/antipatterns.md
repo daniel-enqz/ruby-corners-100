@@ -19,10 +19,12 @@ It's important to focus on testing the desired behavior rather than specific imp
 ![Screenshot 2023-05-23 at 11 03 09](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/f489a859-b3b4-40eb-bb78-0f4be8b1e83d)
 
 1. Remember to use database to mantain clean states in each test
-2. For feature specs, you may consider using Page Objects to clean up repetitive interactions.
-3. Trust in  international- ization (i18n), you will only have to change something there, instead of specs and views.
-4. Rely on mocking and stubbing. Brittle code comes from coupling. The more coupled your code, the harder it is to make changes without having to update multiple locations in your code. 
-5. Reset Global states:
+2. Extract helper methods.
+3. For feature specs, you may consider using Page Objects to clean up repetitive interactions.
+4. Use data-roles
+5. Trust in  international- ization (i18n), you will only have to change something there, instead of specs and views.
+6. Rely on mocking and stubbing. Brittle code comes from coupling. The more coupled your code, the harder it is to make changes without having to update multiple locations in your code. 
+7. Reset Global states:
 
 ```ruby
 module EnvHelper
