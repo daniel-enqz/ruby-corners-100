@@ -12,9 +12,8 @@
 ```ruby
 Capybara.javascript_driver = :webkit
 ```
-
-```ruby
 Then, you want to add a :js tag to all scenarios that need to be run with JavaScript.
+```ruby
 
 feature "A user does something" do
   scenario "and sees a success message", :js do
