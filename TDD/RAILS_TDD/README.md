@@ -6,8 +6,8 @@
 *Index*
 - [Todo app exercise](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#Todo-app-exercise)
 - [Testing in Rails by Josh Steiner](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-in-rails-by-josh-steiner)
-- [Testing Components]()
-- [Test Isolation]()
+- [Testing Components](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/levels_of_abstraction.md)
+- [Test Isolation (MokingvsStubbing)](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/test_isolation.md)
 
 <br>
 
