@@ -12,7 +12,7 @@
 - [Testing Javascript](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/testing_javascript.md)
 
 SUMMARY OF EVERYTHING WILL BE HERE!!! 👇👇👇
-- [Antipatterns](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/antipatterns.md)
+- [SUMMARY](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/summary.md)
 
 <br>
 
