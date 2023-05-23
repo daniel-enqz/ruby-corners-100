@@ -90,6 +90,9 @@ end
 
 > Instead of having unique methods, we are creating a whole TodoOnPage object.
 
+- Look how we are taking advantage of RSpec "magic" 🪄, and methods like `def visible?` can be transformed into `be_visible`.
+- We are also using `click_on`, `has_css`, `find`, provided by `Capybara::DSL`.
+
 ```ruby
 class TodoOnPage
   include Capybara::DSL
