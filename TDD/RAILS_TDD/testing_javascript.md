@@ -6,3 +6,19 @@
 
 ### Capybara Webkit or Poltergeist.
 > These are real browser engines but without the UI. By packaging the engine and not rendering the UI, these headless browsers can improve speed by a significant factor as well as avoid breaking every time you upgrade your browser.
+
+# Simple Config:
+
+```ruby
+Capybara.javascript_driver = :webkit
+```
+
+```ruby
+Then, you want to add a :js tag to all scenarios that need to be run with JavaScript.
+
+feature "A user does something" do
+  scenario "and sees a success message", :js do
+    # test some things
+  end 
+end
+```
