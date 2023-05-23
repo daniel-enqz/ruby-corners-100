@@ -35,8 +35,6 @@ RSpec.describe LinksController, "#create" do
 end
 ```
 
-Test doubles make the interfaces the SUT depends on explicit. Whereas the old spec said that the helper method relied on a Link, the new spec says that methods on Score depend on an object that must implement #upvotes, and #downvotes. This improves the unit tests as a source of documentation.
-
 # Mocking vs Stubbing
 Stubbing is similar to mocking but focuses on controlling the return values of methods or simulating certain behaviors of objects. It allows you to replace the implementation of a method with a predefined response. Mocking involves creating a fake object that mimics the behavior of a real object or component. 
 
