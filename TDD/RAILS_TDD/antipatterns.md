@@ -35,7 +35,9 @@ _* By testing just the inputs and outputs, we can freely change the implementati
 9. Rely on mocking and stubbing. Brittle code comes from coupling. The more coupled your code, the harder it is to make changes without having to update multiple locations in your code. 
 10. When usuing factories, remember to use only what our Model requires.
 11. Avoid stubing our SUT, consider moving some behaviour/dependencies into its own class and stub that.
-12. Reset Global states:
+12. Test behaviour not implementation.
+13. Do not test external libraries. You can use stubs for them instead.
+14. Reset Global states:
 
 ```ruby
 module EnvHelper
