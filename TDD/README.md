@@ -78,7 +78,7 @@ end
 ### So when to use doubles? 🤔
 Doubles are more commonly used in unit tests rather than integration tests. The reason for this is that unit tests aim to isolate the specific piece of code being tested, so using doubles allows you to replace external dependencies, ensuring that the test focuses solely on the functionality of the code in question.
 
-## 🏔️Integration(Feature) Tests:
+## 🏔️Integration(Feature - Testing from user perspective) Tests:
 > They will test that a different parts of the application work together. They can also drive the writing of unit tests.
 
 ### As steps in your integration tests fail, that can point you toward the units that need to be built to build the feature. 
