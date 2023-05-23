@@ -6,15 +6,8 @@
 *Index*
 - [Todo app exercise](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#Todo-app-exercise)
 - [Testing in Rails by Josh Steiner](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-in-rails-by-josh-steiner)
-- [Integration Tests](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#integration-tests)
-- [Testing Models](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-models-(#spec/models/))
-- [Testing Validations](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-validations)
-- [Testing Associations](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-associations)
-- [Testing Requests](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-requests)
-- [Testing Views](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-views)
-- [Testing Controllers](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-controllers)
-- [Testing Mailers](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-mailers)
-
+- [Testing Components]()
+- [Test Isolation]()
 
 <br>
 
