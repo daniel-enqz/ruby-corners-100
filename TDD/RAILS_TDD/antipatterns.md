@@ -32,7 +32,8 @@ _* By testing just the inputs and outputs, we can freely change the implementati
 6. Trust in  internationalization (i18n), you will only have to change something there, instead of specs and views.
 7. Sometimes it will be necessary to test implementaion in service objects. So stubbing the job and assert it was qued.
 8. Rely on mocking and stubbing. Brittle code comes from coupling. The more coupled your code, the harder it is to make changes without having to update multiple locations in your code. 
-9. Reset Global states:
+9. When usuing factories, remember to use only what our Model requires.
+10. Reset Global states:
 
 ```ruby
 module EnvHelper
