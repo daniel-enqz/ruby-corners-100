@@ -15,6 +15,10 @@ _* By testing just the inputs and outputs, we can freely change the implementati
 5. Stub external APIS, do not hit them directly. (You can configure to test the API driectly on CI only)
 6. Delete slow tests that are not cirtical-mission.
 
+## Important learning about private methods:
+- When dealing with private methods, its important to know that they will be indirectly tested by their public methods. 
+> If you feel that the logic in your private methods is necessary to test independently, that may be a hint that the functionality can be encapsulated in its own class. At that point, you can extract a new class to test. This has the added benefit of improved reusability and readability.
+
 
 ## Interminent Failures:
 - How to find the test thats causing the problem?
@@ -23,7 +27,7 @@ _* By testing just the inputs and outputs, we can freely change the implementati
 1. Remember to use database to mantain clean states in each test
 2. Extract helper methods.
 3. For feature specs, you may consider using Page Objects to clean up repetitive interactions.
-4. Use data-roles to assert presence
+4. Use data-roles to assert presence.
 5. Trust in  internationalization (i18n), you will only have to change something there, instead of specs and views.
 6. Sometimes it will be necessary to test implementaion in service objects. So stubbing the job and assert it was qued.
 7. Rely on mocking and stubbing. Brittle code comes from coupling. The more coupled your code, the harder it is to make changes without having to update multiple locations in your code. 
@@ -48,3 +52,4 @@ feature "User views the form setup page", :js do
   scenario "after creating a submission, they see the continue button" do
     with_env("POLLING_INTERVAL", "1") do
 ```
+
