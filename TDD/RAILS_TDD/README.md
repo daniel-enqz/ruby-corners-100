@@ -6,9 +6,13 @@
 *Index*
 - [Todo app exercise](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#Todo-app-exercise)
 - [Testing in Rails by Josh Steiner](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/README.md#testing-in-rails-by-josh-steiner)
-- [Testing Components](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/levels_of_abstraction.md)
+- [Testing Components](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/testing_components.md)
 - [Test Isolation (MokingvsStubbing)](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/test_isolation.md)
+- [Levels of Abstraction](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/levels_of_abstraction.md)
+- [Testing Javascript](https://github.com/daniel-enqz/ruby-corners-100/tree/master/TDD/RAILS_TDD/testing_javascript.md)
 
+
+levels_of_abstraction.md
 <br>
 
 ### Why testing?
