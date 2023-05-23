@@ -17,7 +17,8 @@
 ![Screenshot 2023-05-23 at 11 03 09](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/f489a859-b3b4-40eb-bb78-0f4be8b1e83d)
 
 1. Remember to use database to mantain clean states in each test
-2. Reset Global states:
+2. Rely on mocking and stubbing. Brittle code comes from coupling. The more coupled your code, the harder it is to make changes without having to update multiple locations in your code. 
+3. Reset Global states:
 
 ```ruby
 module EnvHelper
