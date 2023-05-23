@@ -2,6 +2,8 @@
 
 It's important to focus on testing the desired behavior rather than specific implementation details, minimize dependencies, use abstraction layers, and employ techniques like test doubles and mocking. Writing tests that are resilient to code changes and environment variations helps maintain a reliable and efficient test suite.
 
+_* By testing just the inputs and outputs, we can freely change the implementation of the method without having to change our test case.*_
+
 ## Slow tests
 > As applications grow, we will need to be testing more and more stuff. Development can get slow.
 
