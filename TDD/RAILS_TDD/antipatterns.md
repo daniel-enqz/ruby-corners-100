@@ -25,13 +25,14 @@ _* By testing just the inputs and outputs, we can freely change the implementati
 ![Screenshot 2023-05-23 at 11 03 09](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/f489a859-b3b4-40eb-bb78-0f4be8b1e83d)
 
 1. Remember to use database to mantain clean states in each test
-2. Extract helper methods.
-3. For feature specs, you may consider using Page Objects to clean up repetitive interactions.
-4. Use data-roles to assert presence.
-5. Trust in  internationalization (i18n), you will only have to change something there, instead of specs and views.
-6. Sometimes it will be necessary to test implementaion in service objects. So stubbing the job and assert it was qued.
-7. Rely on mocking and stubbing. Brittle code comes from coupling. The more coupled your code, the harder it is to make changes without having to update multiple locations in your code. 
-8. Reset Global states:
+2. Opt for explicit method calls to build and stub necessary objects and dependencies within the test itself. (Avoid let, before, subject)
+3. Extract helper methods.
+4. For feature specs, you may consider using Page Objects to clean up repetitive interactions.
+5. Use data-roles to assert presence.
+6. Trust in  internationalization (i18n), you will only have to change something there, instead of specs and views.
+7. Sometimes it will be necessary to test implementaion in service objects. So stubbing the job and assert it was qued.
+8. Rely on mocking and stubbing. Brittle code comes from coupling. The more coupled your code, the harder it is to make changes without having to update multiple locations in your code. 
+9. Reset Global states:
 
 ```ruby
 module EnvHelper
