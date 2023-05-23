@@ -11,6 +11,7 @@ Benefits:
 - Testing gives us a workflow
 - Teting gives us an overview of our code
 - Of course avoids faliures
+- Enhances testing behaviour rather than implementation
 
 Tests should be readble, here theres a battle with DRY code, sometimes in testing we will put in a pedestal "telling a good story".
 
