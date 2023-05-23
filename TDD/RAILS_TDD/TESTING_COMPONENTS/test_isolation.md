@@ -59,4 +59,8 @@ RSpec.describe Score do describe "#upvotes" do
 end
 ```
 
+---
+
+- There are many patterns for testing external services. Please check this [page 65](https://drive.google.com/file/d/1RyZpE5lvZSxXN6lIEoWrCBQgFr0G7I1i/view), to address this part.
+
 
