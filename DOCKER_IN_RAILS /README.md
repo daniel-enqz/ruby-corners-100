@@ -3,6 +3,10 @@
 ## Docker? 🐳
 “Is a set of tools built around the idea of packaging and running software in small, sandboxed environments known as containers”
 
+
+
+
+
 Excerpt From
 Docker for Rails Developers (for Den Patin)
 Rob Isenberg
