@@ -20,7 +20,9 @@ repeatable way.
 - *Orchestration and scaling* Managing the release of software to a single Docker node or
 across an entire cluster.
 
-
+## Container and Images
+“People have also likened images to an abstract class in programming, and containers to instances of
+that class.”
 
 ### Container
 Simply put, a container is another process on your machine that has been isolated from all other processes on the host machine.
