@@ -4,6 +4,8 @@
 “Is a set of tools built around the idea of packaging and running software in small, sandboxed environments known as containers”
 
 ### What we can achieve with docker?
+Essentialy we can create precise ecosystems for our development.
+
 - *Packaging* The ability to package software into a reusable, shareable format known as
 images.
 
