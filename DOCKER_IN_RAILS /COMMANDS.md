@@ -11,8 +11,8 @@ This command starts a new container based on an image.
 
 `docker run -it --rm -v ${PWD}:/usr/src/app ruby:3.1.0 bash`
 
-1. Specifically, -v ${PWD}:/usr/src/app says, “Mount our current directory inside the container at
-/usr/src/app” (${PWD} is a Unix environment variable pointing to the current directory). This
-means that any files in our local directory would be visible in /usr/src/app inside the container.
+1. Specifically, -v ${PWD}:/usr/src/app says, “Mount our current directory inside the container at /usr/src/app”
+
+> On your local machine, when you run the Docker container with the -v ${PWD}:/usr/src/app option, you are mounting your local current working directory (the output of pwd command) to the /usr/src/app directory inside the container. This establishes a connection between the two directories.
 
 2. -it flags helps start an interactive session through a bash terminal and give input to our container.
