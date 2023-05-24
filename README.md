@@ -14,9 +14,10 @@ In order to understand the corners of both enviorments better and to be able to 
 - [Eloquent Ruby](https://github.com/daniel-enqz/ruby-corners-100/tree/master/Ruby/confident_ruby)
 
 ### TDD:
-- [Fundamentals](https://github.com/daniel-enqz/exceptional-ruby/tree/master/TDD)
+- [All abou testing in ruby and rails](https://github.com/daniel-enqz/exceptional-ruby/tree/master/TDD)
 
 ### Rails
+- [Usuing Docker in Rails](https://github.com/daniel-enqz/exceptional-ruby/tree/master/DOCKER_IN_RAILS)
 ---
 
 Other resources: 
