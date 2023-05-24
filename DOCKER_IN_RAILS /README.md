@@ -1,5 +1,20 @@
 # USING DOCKER IN RAILS
 
+## Docker? 🐳
+“Is a set of tools built around the idea of packaging and running software in small, sandboxed environments known as containers”
+
+Excerpt From
+Docker for Rails Developers (for Den Patin)
+Rob Isenberg
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+
+Excerpt From
+Docker for Rails Developers (for Den Patin)
+Rob Isenberg
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+
 ### Container
 Simply put, a container is another process on your machine that has been isolated from all other processes on the host machine.
 
