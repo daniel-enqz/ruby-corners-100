@@ -14,10 +14,12 @@ FROM ruby:2.6
 RUN apt-get update -yqq                                 
 RUN apt-get install -yqq --no-install-recommends nodejs 
 
-COPY . /usr/src/app/                                    
-WORKDIR /usr/src/app                                    
-
+COPY . /usr/src/app/  # copy all the files from our local, current directory (.) into /usr/src/app                                 
+WORKDIR /usr/src/app  # make this the current working directory for the image (line 8) so that we can execute Rails commands against the image from the correct directory.                                       
 RUN bundle install
+```
+1. The -yqq option is a combination of the -y option, which says to answer “yes” to any prompts, and the -qq option, which enables “quiet” mode to reduce the printed output.
+2. apt-get install command installs Node.js, a prerequisite for running Rails. The --no-install-recommends says not to install other recommended but nonessential packages.
 
 
 
