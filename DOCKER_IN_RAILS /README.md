@@ -39,5 +39,9 @@ This command starts a new container based on an image.
 ![Screenshot 2023-05-24 at 10 41 48](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/c97a8abd-c6e2-4dca-aacb-f80771e854d2)
 
 
+# Interacting with containers:
+“We can start a container running an interactive Bash shell. When we do this, we literally get a terminal session running inside the container.”
+
+
 # Docker architecture:
 ![Screenshot 2023-05-24 at 12 08 18](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/a547a5c4-f934-4948-9f5a-c150d43472c4)
