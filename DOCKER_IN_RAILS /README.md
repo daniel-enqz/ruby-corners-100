@@ -3,21 +3,22 @@
 ## Docker? 🐳
 “Is a set of tools built around the idea of packaging and running software in small, sandboxed environments known as containers”
 
+### What we can achieve with docker?
+- *Packaging* The ability to package software into a reusable, shareable format known as
+images.
+
+- *Distribution* The ability to easily share packaged software (images) with other people and
+deploy it to different machines.
+
+- Runtime. The ability to run, pause, restart, or stop packaged software in a reliable,
+repeatable way.
+
+- *Infrastructure creation* Creating virtual machines ready to run our Docker containers.
+
+- *Orchestration and scaling* Managing the release of software to a single Docker node or
+across an entire cluster.
 
 
-
-
-Excerpt From
-Docker for Rails Developers (for Den Patin)
-Rob Isenberg
-https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
-This material may be protected by copyright.
-
-Excerpt From
-Docker for Rails Developers (for Den Patin)
-Rob Isenberg
-https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
-This material may be protected by copyright.
 
 ### Container
 Simply put, a container is another process on your machine that has been isolated from all other processes on the host machine.
