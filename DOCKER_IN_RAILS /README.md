@@ -52,4 +52,10 @@ means that any files in our local directory would be visible in /usr/src/app ins
 
 # Docker architecture:
 
+> The daemon is responsible for doing the heavy lifting in terms of starting, stopping, and otherwise bossing around our containers.
+> However, Docker is built on Linux containerization technologies that Mac and Windows do not have
+> natively. Docker gets around this by installing a lightweight Linux virtual machine that runs
+> the Docker daemon. This leads to a slightly different architecture for Docker for Mac/Windows, as
+> shown in the following figure.
+
 ![Screenshot 2023-05-24 at 12 08 18](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/a547a5c4-f934-4948-9f5a-c150d43472c4)
