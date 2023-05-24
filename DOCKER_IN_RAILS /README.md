@@ -8,3 +8,4 @@ When running a container, it uses an isolated filesystem. This custom filesystem
 
 “docker run [OPTIONS] <image <command>”
 ![Screenshot 2023-05-24 at 10 41 48](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/c97a8abd-c6e2-4dca-aacb-f80771e854d2)
+![Screenshot 2023-05-24 at 12 07 25](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/76c42478-b461-44e6-b5f0-efd76dde276d)
