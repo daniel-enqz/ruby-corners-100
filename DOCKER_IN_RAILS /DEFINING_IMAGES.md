@@ -12,7 +12,6 @@ point.
 1. The -yqq option is a combination of the -y option, which says to answer “yes” to any prompts, and the -qq option, which enables “quiet” mode to reduce the printed output.
 2. apt-get install command installs Node.js, a prerequisite for running Rails. The --no-install-recommends says not to install other recommended but nonessential packages.
 3. Any changes made to files or directories within /usr/src/app inside the container will be reflected in your local working directory, and vice versa.
-4. So, in a way, /usr/src/app serves as a convenient reference to your local working directory within the Docker container, enabling seamless interaction between your local files and the containerized environment.
 
 ```
 FROM ruby:2.6 
