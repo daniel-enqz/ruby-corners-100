@@ -28,7 +28,7 @@ that class.”
 Simply put, a container is another process on your machine that has been isolated from all other processes on the host machine.
 
 # Running first commands:
-This command starts a new container based on <image>.
+This command starts a new container based on an image.
   
 `docker run [OPTIONS] <image>`
 
