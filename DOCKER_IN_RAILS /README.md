@@ -35,6 +35,7 @@ When running a container, it uses an isolated filesystem. This custom filesystem
 This command starts a new container based on an image.
   
 `docker run [OPTIONS] <image>`
+<br>
 ![Screenshot 2023-05-24 at 10 41 48](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/c97a8abd-c6e2-4dca-aacb-f80771e854d2)
 
 
