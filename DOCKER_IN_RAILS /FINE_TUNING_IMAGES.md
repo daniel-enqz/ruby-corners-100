@@ -17,3 +17,10 @@ CMD ["bin/rails", "s", "-b", "0.0.0.0"]
 
 Of course we will need to rebuild this image, in order to create a new container:
 `docker build -t railsapp .`
+
+You can allways ran more commands like the next one:
+`docker run --rm railsapp bin/rails -T` 
+
+Note the use of --rm to delete the container after it runs. We used it here and not when running
+the Rails server, because this container has served its purpose after it has generated the Rake task
+output, whereas a container to run the Rails server can be reused.
