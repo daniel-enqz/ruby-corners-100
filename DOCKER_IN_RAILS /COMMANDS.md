@@ -2,6 +2,7 @@
 
 - `docker ps`: lists current running containers
 - `docker ps -a`: lists all stopped containers
+- `docker build .`: Will create an image based on Dockerfile
 - `docker images`: lists all images
 - `docker run <image>`: Will create a container based on an image.
 
