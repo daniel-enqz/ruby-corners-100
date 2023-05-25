@@ -29,6 +29,9 @@ You can allways overide CMD in dockerfile by sending a command like:
 `docker run --rm railsapp bin/rails -T` 
 
 # Problems with Caching.
+
+> Remember you can an `.dockerignore` file to ignore files like .git, node_modules, etc. Thos will not be send when building the image.
+
 When rebuilding an image, we can encounter the problem where only by changing a line in README.md for example it will end up installing our gems again, 
 becasue that step is bellow `COPY . /usr/src/app/`, so it will stop usuing caching from that line below.
 Fix it like this:
