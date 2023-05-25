@@ -14,6 +14,7 @@ point.
 3. Any changes made to files or directories within /usr/src/app inside the container will be reflected in your local working directory, and vice versa.
 
 ```
+# Dockerfile / Run this with "docker build ."
 FROM ruby:2.6 
 
 RUN apt-get update -yqq                                 
