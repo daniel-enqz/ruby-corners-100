@@ -36,7 +36,12 @@ Finally we can run a command inside our created container using our image ID:
 ```bash
 docker run -p 3000:3000 a1df0eddba18 bin/rails s -b 0.0.0.0
 ```
+### How ports will work:
 
+- The -p 3000:3000 option is used to publish the container's port 3000 to port 3000 on the local machine. This means that any request made to http://localhost:3000 on the local machine will be forwarded to the Rails server running inside the container on port 3000.
+
+
+![Screenshot 2023-05-25 at 10 39 40](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/c1966ee6-47e9-413e-9ef2-8d82eea0c072)
 
 ---
 
