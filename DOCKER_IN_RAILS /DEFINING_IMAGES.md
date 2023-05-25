@@ -56,3 +56,13 @@ docker run -p 3000:3000 a1df0eddba18 bin/rails s -b 0.0.0.0
 ---
 
 
+# IN A NUTSHELL THIS IS HOW IT WORKS:
+“When the docker build command is run, the CLI tool takes all the files in the build directory
+specified—which collectively are known as the build context—and sends them to the
+Docker daemon. The daemon is then able to process the Dockerfile and carry out the instructions in
+it to generate the image.”
+
+
+
+
+
