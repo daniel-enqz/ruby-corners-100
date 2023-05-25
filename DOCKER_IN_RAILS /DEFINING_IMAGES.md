@@ -1,5 +1,7 @@
 # Dockerfiles
 
+![Screenshot 2023-05-24 at 15 21 57](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/b885eedc-b4d9-4189-a404-79b4fc3a300e)
+
 A Dockerfile uses special syntax to describe exactly how the image should be constructed.
 - Dockerfile is made up of various instructions—such as FROM, RUN, COPY, and WORKDIR
 
@@ -50,8 +52,4 @@ docker run -p 3000:3000 a1df0eddba18 bin/rails s -b 0.0.0.0
 ![Screenshot 2023-05-25 at 10 39 40](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/c1966ee6-47e9-413e-9ef2-8d82eea0c072)
 
 ---
-
-# Docker architecture
-![Screenshot 2023-05-24 at 15 21 57](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/b885eedc-b4d9-4189-a404-79b4fc3a300e)
-
 
