@@ -20,3 +20,23 @@ Of course we will need to rebuild this image, in order to create a new container
 
 You can allways overide CMD in dockerfile by sending a command like:
 `docker run --rm railsapp bin/rails -T` 
+
+# Problems with Caching.
+When rebuilding an image, we can encounter the problem where only by changing a line in README.md for example it will end up installing our gems again, 
+becasue that step is bellow `COPY . /usr/src/app/`, so it will stop usuing caching from that line below.
+Fix it like this:
+```bash
+FROM ruby:2.6 
+
+RUN apt-get update -yqq                                 
+RUN apt-get install -yqq --no-install-recommends nodejs 
+
+COPY Gemfile* /usr/src/app/ # This creates a separate, independent layer. Docker’s cache for this layer will only be busted if either of these two files change.           
+WORKDIR /usr/src/app                  
+RUN bundle install
+
+COPY . /usr/src/app/ # Now, changes to all remaining files copied in this step will only bust the cache at this instruction, which is after our gems have been installed—just what we want.
+
+CMD ["bin/rails", "s", "-b", "0.0.0.0"]
+```
+     
