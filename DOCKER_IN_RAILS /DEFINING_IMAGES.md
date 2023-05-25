@@ -24,6 +24,14 @@ COPY . /usr/src/app/  # copy files or directories from the host machine (your lo
 WORKDIR /usr/src/app  # make this the current working directory for the image (line 8) so that we can execute Rails commands against the image from the correct directory.                                       
 RUN bundle install
 ```
+This will generate images step by step, after each step it will delete that image. The very last image will be the one after all steps are completd.
+- With `docker images` we will see the following output:
+
+“The first entry is the custom image that at the end of the docker build command.”
+
+![Screenshot 2023-05-25 at 10 01 12](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/e3a572e7-5a18-4369-bb2f-3553ebf58544)
 
 
 ![Screenshot 2023-05-24 at 15 21 57](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/b885eedc-b4d9-4189-a404-79b4fc3a300e)
+
+
