@@ -41,3 +41,12 @@ When running a container, it uses an isolated filesystem. This custom filesystem
 > shown in the following figure.
 
 ![Screenshot 2023-05-24 at 12 08 18](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/a547a5c4-f934-4948-9f5a-c150d43472c4)
+
+---
+
+# IN A NUTSHELL THIS IS HOW IT WORKS:
+“When the docker build command is run, the CLI tool takes all the files in the build directory
+specified—which collectively are known as the build context—and sends them to the
+Docker daemon. The daemon is then able to process the Dockerfile and carry out the instructions in
+it to generate the image.”
+
