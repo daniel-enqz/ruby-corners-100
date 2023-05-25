@@ -33,7 +33,9 @@ This will generate images step by step, after each step it will delete that imag
 
 Finally we can run a command inside our created container using our image ID:
 
-```docker run -p 3000:3000 a1df0eddba18 bin/rails s -b 0.0.0.0```
+```bash
+docker run -p 3000:3000 a1df0eddba18 bin/rails s -b 0.0.0.0
+```
 
 
 ---
