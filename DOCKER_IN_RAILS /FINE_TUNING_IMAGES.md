@@ -7,3 +7,15 @@ Adding a new instruction to our Dockerfile. The CMD instruction, pronounced“co
 ```bash
 “​FROM​​ ruby:2.6 RUN ​apt-get update -yqq​ ​RUN ​apt-get install -yqq --no-install-recommends nodejs​ ​ ​COPY​​ . /usr/src/app/​​ ​ ​WORKDIR​​ /usr/src/app​​ ​RUN ​bundle install​ »​CMD​​ ["bin/rails", "s", "-b", "0.0.0.0"]​”
 ```
+
+```bash
+FROM ruby:2.6 
+
+RUN apt-get update -yqq                                 
+RUN apt-get install -yqq --no-install-recommends nodejs 
+
+COPY . /usr/src/app/  # copy files or directories from the host machine (your local system) into the Docker image.                               
+WORKDIR /usr/src/app  # make this the current working directory for the image (line 8) so that we can execute Rails commands against the image from the correct directory.                                       
+RUN bundle install
+CMD ["bin/rails", "s", "-b", "0.0.0.0"]
+```
