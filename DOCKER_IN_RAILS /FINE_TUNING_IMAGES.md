@@ -16,4 +16,4 @@ CMD ["bin/rails", "s", "-b", "0.0.0.0"]
 ```
 
 Of course we will need to rebuild this image, in order to create a new container:
-`docker build -t railsapp` 
+`docker build -t railsapp .`
