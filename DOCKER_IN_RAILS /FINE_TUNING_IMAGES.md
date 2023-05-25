@@ -1,10 +1,17 @@
 # Fine Tuning Images
 
+### Adding our label, signature 😎 to our dockerfile(image)
+```bash
+LABEL maintainer="Daniel Enqz < daniel.enm17@gmail.com"
+```
+
 ### Running a specific command 
 Adding a new instruction to our Dockerfile. The CMD instruction, pronounced“command,” specifies the default command to run when a container is started from the image.
 
 ```bash
 FROM ruby:2.6 
+
+LABEL maintainer="Daniel Enqz < daniel.enm17@gmail.com"
 
 RUN apt-get update -yqq                                 
 RUN apt-get install -yqq --no-install-recommends nodejs 
@@ -27,6 +34,8 @@ becasue that step is bellow `COPY . /usr/src/app/`, so it will stop usuing cachi
 Fix it like this:
 ```bash
 FROM ruby:2.6 
+
+LABEL maintainer="Daniel Enqz < daniel.enm17@gmail.com"
 
 RUN apt-get update -yqq                                 
 RUN apt-get install -yqq --no-install-recommends nodejs 
