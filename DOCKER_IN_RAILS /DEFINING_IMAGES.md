@@ -31,7 +31,14 @@ This will generate images step by step, after each step it will delete that imag
 
 ![Screenshot 2023-05-25 at 10 01 12](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/e3a572e7-5a18-4369-bb2f-3553ebf58544)
 
+Finally we can run a command inside our created container using our image ID:
 
+```docker run -p 3000:3000 a1df0eddba18 bin/rails s -b 0.0.0.0```
+
+
+---
+
+# Docker architecture
 ![Screenshot 2023-05-24 at 15 21 57](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/b885eedc-b4d9-4189-a404-79b4fc3a300e)
 
 
