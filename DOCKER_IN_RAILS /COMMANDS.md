@@ -1,8 +1,9 @@
 # Running first commands:
 
-- `docker ps:` lists current running containers
-- `docker ps -a:` lists all stopped containers
-- `docker images:` lists all images
+- `docker ps`: lists current running containers
+- `docker ps -a`: lists all stopped containers
+- `docker images`: lists all images
+- `docker run <image>`: Will create a container based on an image.
 
 This command starts a new container based on an image.
   
