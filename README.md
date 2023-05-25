@@ -17,7 +17,7 @@ In order to understand the corners of both enviorments better and to be able to 
 - [All about testing in ruby and rails](https://github.com/daniel-enqz/exceptional-ruby/tree/master/TDD)
 
 ### Rails
-- [Using Docker in Rails](https://github.com/daniel-enqz/exceptional-ruby/tree/master/DOCKER_IN_RAILS)
+- [Using Docker in Rails](https://github.com/daniel-enqz/ruby-corners-100/tree/master/DOCKER_IN_RAILS%20)
 ---
 
 Other resources: 
