@@ -20,7 +20,7 @@ services:
 1. We can start the containers in detached mode by specifying the -d option. This launches the application in the background and returns you to the shell prompt.
 - `docker-compose up -d`
 
-2. Starting and Stopping Services
+2. Starting and Stopping Services `docker-compose [start|stop|kill|restart|pause|unpause|rm] service name>`
 ![Screenshot 2023-05-29 at 9 36 34](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/664a75bb-041c-4d98-8f87-e6fd978fb1b0)
 
 3. Listing running containers `docker-compose ps`
@@ -28,11 +28,18 @@ services:
 
 4. Viewing the Container Logs `docker-compose logs -f web` 
 
-5. Rebuilding images (Needed when you modify gemfile, dockerfile or add other dependecies)
+5. Ruuning commands
+- In a new, throwaway container `docker-compose run --rm <service name> <some command>`
+- Run a one-off command in an existing container `docker-compose exec <service name> <some command>`
+
+6. Rebuilding images (Needed when you modify gemfile, dockerfile or add other dependecies)
 - `docker-compose build web`
 
-6. Cleaning
+7. Cleaning
 - A single container `docker-compose rm`
 - All containers `docker container prune`
 - All images `docker image prune`
 - Free up all resources `docker system prune`
+
+8. STARTING OUR WHOLE APP (ALL SERVICES)
+- `docker-compose up`
