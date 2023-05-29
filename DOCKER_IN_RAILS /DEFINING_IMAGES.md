@@ -38,7 +38,8 @@ Finally we can run a command inside our created container using our image ID:
 ```bash
 docker run -p 3000:3000 a1df0eddba18 bin/rails s -b 0.0.0.0
 ```
-- Instead of using the image ID: `a1df0eddba18` we can customize the name by doing `docker tag <image-ID>[DESIRED_TAG_NAME]` 
+- Instead of using the image ID: `a1df0eddba18` we can customize the name by doing `docker tag <image-ID>[DESIRED_TAG_NAME]`
+- You can also specify a container name in running like: `“docker run --name redis-container redis`
 
 ### How ports will work:
 
