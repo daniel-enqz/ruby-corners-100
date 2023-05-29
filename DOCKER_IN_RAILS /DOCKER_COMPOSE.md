@@ -28,4 +28,5 @@ services:
 ![Screenshot 2023-05-29 at 9 39 05](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/4e1e6ffb-7022-460c-b61a-63db05234c36)
 
 4. Viewing the Container Logs
-- “docker-compose logs -f web
+- `docker-compose logs -f web` 
+
