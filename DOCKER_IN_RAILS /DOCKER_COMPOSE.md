@@ -23,10 +23,16 @@ services:
 2. Starting and Stopping Services
 ![Screenshot 2023-05-29 at 9 36 34](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/664a75bb-041c-4d98-8f87-e6fd978fb1b0)
 
-3. Listing running containers
-- `docker-compose ps`
+3. Listing running containers `docker-compose ps`
 ![Screenshot 2023-05-29 at 9 39 05](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/4e1e6ffb-7022-460c-b61a-63db05234c36)
 
-4. Viewing the Container Logs
-- `docker-compose logs -f web` 
+4. Viewing the Container Logs `docker-compose logs -f web` 
 
+5. Rebuilding images (Needed when you modify gemfile, dockerfile or add other dependecies)
+- `docker-compose build web`
+
+6. Cleaning
+- A single container `docker-compose rm`
+- All containers `docker container prune`
+- All images `docker image prune`
+- Free up all resources `docker system prune`
