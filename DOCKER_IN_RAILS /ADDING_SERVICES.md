@@ -23,6 +23,8 @@ services:
     image: redis
 ```
 
+*By running docker-compose up, the defined services will be started and connected within the network, enabling communication between them.*
+
 > When defining a service, there are two ways to specify the image to be used for creating containers.
 Our web service uses the build property to instruct Compose to build our custom image from a
 Dockerfile. However, to use a preexisting image instead, we can specify the image’s name with
