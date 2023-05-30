@@ -43,7 +43,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - .:/usr/src/app
+      - .:/usr/src/app # line 10
     env_file:
       - .env/development/database
       - .env/development/web
@@ -55,7 +55,19 @@ services:
     image: postgres
     env_file:
       - .env/development/database
+    volumes:
+      - db_data:var/lib/postgresql/data # line 23
+  
+  volumes:
+    db_data:
 ```
+
+### Important: Persisting data
+
+Mounting a named volume (line 23) is similar to mounting a local directory (line 10)—the difference is that the part before
+the colon refers to the name of the named volume rather than a local path. Here (line 23) we’re saying, “Mount the db_data named
+volume at /var/lib/postgresql/data”—the directory where the Postgres image stores its
+database files that we want to persist.”
 
 In order to connect to the service, we can do:
 `docker-compose run --rm database psql -U postgres -h database` 
