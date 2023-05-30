@@ -73,6 +73,12 @@ the colon refers to the name of the named volume rather than a local path. Here 
 volume at /var/lib/postgresql/data”—the directory where the Postgres image stores its
 database files that we want to persist.”
 
-This command will output the mountpoint path of the specified volume. In this case, it will display /var/lib/docker/volumes/myapp_db_data/_data as the mountpoint for the myapp_db_data volume.
-`docker volume inspect --format '{{ .Mountpoint }}' myapp_db_data`
+This command will output the mountpoint path of the specified volume. In this case, it will display /var/lib/docker/volumes/myapp_db_data/data as the mountpoint for the myapp_db_data volume.
+```
+docker volume inspect --format '{{ .Mountpoint }}' myapp_db_data
+#OUTPUT => /var/lib/docker/volumes/myapp_db_data/_data
+```
+### What is that output?
+
+The mountpoint path /var/lib/docker/volumes/myapp_db_data/data is the location where the data associated with the Docker volume myapp_db_data is stored on the host machine. When you use a Docker volume to persist data, it is stored in this location, allowing it to be accessed and reused by containers even after they are restarted or recreated.
 
