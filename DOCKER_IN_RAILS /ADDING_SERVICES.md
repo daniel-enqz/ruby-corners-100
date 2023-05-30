@@ -32,5 +32,27 @@ the image property. Here we specify the redis image, just like in our docker run
 
 ## Postgres:
 
-Running a separetly container:
+```ruby
+version: "3"
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+
+  redis:
+    image: redis
+
+  database:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+```
+
+In order to connect to the service, we can do:
 `docker-compose run --rm database psql -U postgres -h database` 
