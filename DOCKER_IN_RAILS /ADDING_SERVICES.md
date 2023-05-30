@@ -7,3 +7,23 @@ Remember we can run a container with a specific predifined image with:
 
 Or we can define our service in `docker-compose.yml`
 - `docker-compose up -d redis`
+
+```ruby
+version: "3"
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+
+  redis:
+    image: redis
+```
+
+> When defining a service, there are two ways to specify the image to be used for creating containers.
+Our web service uses the build property to instruct Compose to build our custom image from a
+Dockerfile. However, to use a preexisting image instead, we can specify the image’s name with
+the image property. Here we specify the redis image, just like in our docker run command.
