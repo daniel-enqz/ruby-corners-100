@@ -41,5 +41,7 @@ services:
 - All images `docker image prune`
 - Free up all resources `docker system prune`
 
-8. STARTING OUR WHOLE APP (ALL SERVICES)
+8. Starting a service again, and recreating it: `docker-compose up -d --force-recreate web`
+
+9. STARTING OUR WHOLE APP (ALL SERVICES)
 - `docker-compose up`
