@@ -68,12 +68,8 @@ services:
 
 ### ‼️ Important: Persisting data
 
-Mounting a named volume (line 23) is similar to mounting a local directory (line 10)—the difference is that the part before
-the colon refers to the name of the named volume rather than a local path. Here (line 23) we’re saying, “Mount the db_data named
-volume at /var/lib/postgresql/data”—the directory where the Postgres image stores its
-database files that we want to persist.”
+- We cannot rely on saving data in the same database container, therefore we will use volumes, if we stop our database container with a connected volume, the volume will still exist independently. 
 
-This command will output the mountpoint path of the specified volume. In this case, it will display /var/lib/docker/volumes/myapp_db_data/data as the mountpoint for the myapp_db_data volume.
 ```
 docker volume inspect --format '{{ .Mountpoint }}' myapp_db_data
 #OUTPUT => /var/lib/docker/volumes/myapp_db_data/_data
