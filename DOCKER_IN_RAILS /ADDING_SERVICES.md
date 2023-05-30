@@ -32,6 +32,8 @@ the image property. Here we specify the redis image, just like in our docker run
 
 ## Postgres:
 
+![Screenshot 2023-05-30 at 12 04 06](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/2eb8cc61-abb3-4bda-b535-30c4b79b1bc7)
+
 ```ruby
 version: "3"
 
@@ -42,16 +44,17 @@ services:
       - "3000:3000"
     volumes:
       - .:/usr/src/app
+    env_file:
+      - .env/development/database
+      - .env/development/web
 
   redis:
     image: redis
 
   database:
     image: postgres
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: postgres
+    env_file:
+      - .env/development/database
 ```
 
 In order to connect to the service, we can do:
