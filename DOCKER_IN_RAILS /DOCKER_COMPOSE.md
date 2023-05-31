@@ -30,6 +30,7 @@ services:
 
 5. Ruuning commands
 - In a new, throwaway container `docker-compose run --rm <service name> <some command>`
+- Open an interactive terminal to debug with: `docker-compose run --service-ports web`
 - Run a one-off command in an existing container `docker-compose exec <service name> <some command>`
 
 6. Rebuilding images (Needed when you modify gemfile, dockerfile or add other dependecies)
