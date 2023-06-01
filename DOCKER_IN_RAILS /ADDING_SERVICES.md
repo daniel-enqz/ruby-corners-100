@@ -1,5 +1,9 @@
 # Adding services
 
+### Quick reminder about `ports`
+- In Docker, when you define port mappings using the ports directive, you are specifying how network traffic should be forwarded between the host machine and the containers.
+- These additional ports mappings allow you to access different services running inside their respective containers from the host machine or other devices on the network. 
+
 ## Redis:
 
 Remember we can run a container with a specific predifined image with:
