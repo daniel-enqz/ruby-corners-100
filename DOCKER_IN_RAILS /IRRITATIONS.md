@@ -22,3 +22,7 @@ CMD ["bin/rails", "s", "-b", "0.0.0.0"]
 
 
 ## Compose Intermittently Aborts with Ctrl-C
+
+- When starting your app with docker-compose in attached mode, we can exit this gracefully with `Ctrl + C`. 
+- Sometimes we will get `^CERROR: Aborting.`
+- Solution: `docker-compose up -d` Start the app in detached mode jeje.
