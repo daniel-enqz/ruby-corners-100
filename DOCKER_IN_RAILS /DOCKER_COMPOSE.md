@@ -11,6 +11,7 @@ services:
       - "3000:3000"
     volumes:
       - .:/usr/src/app
+      - gem_cache:/gems
 ```
 
 1. Is a tool for managing an application that needs several different containers to work together.
