@@ -20,3 +20,5 @@ ENTRYPOINT ["./docker/docker-entrypoint.sh"]
 CMD ["bin/rails", "s", "-b", "0.0.0.0"]
 ```
 
+
+## Compose Intermittently Aborts with Ctrl-C
