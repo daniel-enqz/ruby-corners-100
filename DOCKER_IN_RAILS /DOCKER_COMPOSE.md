@@ -16,6 +16,12 @@ services:
 1. Is a tool for managing an application that needs several different containers to work together.
 2. It also manages creating and destroying the resources needed for the app.
 
+# Why volumes?
+> “A mounted local volume represents some filesystem that’s shared between your local machine and the
+container. Files in the mounted volume are synced both ways between your local filesystem and the
+container.”
+
+
 ## Some usefull commands
 1. We can start the containers in detached mode by specifying the -d option. This launches the application in the background and returns you to the shell prompt.
 - `docker-compose up -d`
