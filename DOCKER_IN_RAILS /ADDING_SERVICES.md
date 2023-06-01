@@ -89,4 +89,7 @@ container. Files in the mounted volume are synced both ways between your local f
 container.”
 
 - We are also setting a volume for our gems cache, so now theres no need to reinstall all gems when rebuilding our image as it will use the volume.
+> “Thanks to our BUNDLE_PATH, set in our Dockerfile image this installs the projects’ gems to the container’s /gems directory.
+As we know, that’s where our gem_cache volume is mounted, courtesy of our volume mapping. As a consequence, all our gems are now installed on our gem_cache volume.”
+
 
