@@ -51,7 +51,8 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - .:/usr/src/app # line 10
+      - .:/usr/src/app
+      - gem_cache:/gems
     env_file:
       - .env/development/database
       - .env/development/web
@@ -64,7 +65,7 @@ services:
     env_file:
       - .env/development/database
     volumes:
-      - db_data:var/lib/postgresql/data # line 23
+      - db_data:var/lib/postgresql/data
   
   volumes:
     db_data:
@@ -81,4 +82,11 @@ docker volume inspect --format '{{ .Mountpoint }}' myapp_db_data
 ### What is that output?
 
 The mountpoint path /var/lib/docker/volumes/myapp_db_data/data is the location where the data associated with the Docker volume myapp_db_data is stored on the host machine. When you use a Docker volume to persist data, it is stored in this location, allowing it to be accessed and reused by containers even after they are restarted or recreated.
+
+# Why volumes?
+> “A mounted local volume represents some filesystem that’s shared between your local machine and the
+container. Files in the mounted volume are synced both ways between your local filesystem and the
+container.”
+
+- We are also setting a volume for our gems cache, so now theres no need to reinstall all gems when rebuilding our image as it will use the volume.
 
