@@ -33,4 +33,6 @@ the image property. Here we specify the redis image, just like in our docker run
 ## Postgres:
 
 Running a separetly container:
-`docker-compose run --rm database psql -U postgres -h database` 
+`docker-compose run --rm database psql -U postgres -h database`
+
+In the previous example the flag -h is used to specify the hostname to connect to.
