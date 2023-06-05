@@ -65,8 +65,9 @@ CMD ["bin/rails", "s", "-b", "0.0.0.0"]
 ```
 3. Push app to Docker Hub: `docker build -f Dockerfile.prod -t danielenqz/myapp_web:prod .`
 
-“In fact, there are lots of options when it comes to sharing your images, depending on your
-requirements. Docker Hub is only one of several hosted registries available. Other options include:
+In fact, there are lots of options when it comes to sharing your images, depending on your requirements. Docker Hub is only one of several hosted registries available. Other options include:
 
-
-Amazon Elastic Container Registry[105]Google Cloud Container Registry[106]Microsoft Azure Container Registry[107]Quay[108]”
+- Amazon Elastic Container Registry
+- Google Cloud Container Registry
+- Microsoft Azure Container Registry
+- Quay
