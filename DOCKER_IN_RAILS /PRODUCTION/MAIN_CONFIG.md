@@ -17,3 +17,5 @@ Running software in production. We can break this down into a number of differen
 
 >  The cluster can be composed of physical machines, virtual machines (VMs), or a combination of both.
 
+# Kubernates vs Swarm
+![Screenshot 2023-06-04 at 20 08 01](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/2c13164b-bd8d-4e89-a4ce-a5b9345a170f)
