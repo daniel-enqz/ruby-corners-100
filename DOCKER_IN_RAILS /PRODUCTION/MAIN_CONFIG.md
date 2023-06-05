@@ -64,6 +64,8 @@ CMD ["bin/rails", "s", "-b", "0.0.0.0"]
 [...]
 ```
 3. Push app to Docker Hub: `docker build -f Dockerfile.prod -t danielenqz/myapp_web:prod .`
+  - Naming convention `[<registry hostname>[:port]/]<username>/<image name>[:<tag>]`
+  - We can now have images in multiple machines.
 
 In fact, there are lots of options when it comes to sharing your images, depending on your requirements. Docker Hub is only one of several hosted registries available. Other options include:
 
