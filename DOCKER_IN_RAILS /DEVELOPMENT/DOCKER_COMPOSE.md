@@ -16,6 +16,7 @@ services:
 
 1. Is a tool for managing an application that needs several different containers to work together.
 2. It also manages creating and destroying the resources needed for the app.
+3. The truth, though, is that Compose, as a tool, is really designed to help us during development.
 
 # Why volumes?
 > “A mounted local volume represents some filesystem that’s shared between your local machine and the
