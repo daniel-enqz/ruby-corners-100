@@ -53,6 +53,17 @@ SECRET_KEY_BASE=5dc3229a37d70549bcd163b05e184fbaa20579bc552191e35a51d36827226675
 RAILS_LOG_TO_STDOUT=true
 RAILS_SERVE_STATIC_FILES=true
 ```
+2. Create a new COPY of Dockerfile and as assets will not be served in each request and instead be chached, we need to add this line:
+```bash
+# Dockerfile.prod
+[...]
+RUN bin/rails assets:precompile
+
+ENTRYPOINT ["./docker/docker-entrypoint.sh"]
+CMD ["bin/rails", "s", "-b", "0.0.0.0"]
+[...]
+```
+
 
 “In fact, there are lots of options when it comes to sharing your images, depending on your
 requirements. Docker Hub is only one of several hosted registries available. Other options include:
