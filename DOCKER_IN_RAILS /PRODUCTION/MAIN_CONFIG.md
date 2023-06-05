@@ -23,3 +23,13 @@ Running software in production. We can break this down into a number of differen
 ## IaaS vs CaaS
 
 > IaaS provides virtualized infrastructure resources, while CaaS focuses specifically on containerization technologies and provides a platform to run and manage containers efficiently.
+
+### What to choose?
+
+- Upfront cost vs. long-term cost.
+- Focus and developer bandwidth. 
+- Support and maintenance costs.
+- Control and flexibility.
+- Regional availability.
+- Level of expertise required vs. ability of team.
+- Vendor/platform lock-in.
