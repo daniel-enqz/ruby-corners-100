@@ -33,3 +33,29 @@ Running software in production. We can break this down into a number of differen
 - Regional availability.
 - Level of expertise required vs. ability of team.
 - Vendor/platform lock-in.
+
+---
+
+### Pushing our app to Docker Hub.
+1. Be sure to create a separte file `.env`
+
+```bash
+# .env/production/database
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres-production
+POSTGRES_DB=myapp_production
+```
+```bash
+# .env/production/web
+DATABASE_HOST=database
+RAILS_ENV=production
+SECRET_KEY_BASE=5dc3229a37d70549bcd163b05e184fbaa20579bc552191e35a51d3682722667531b5306202bbefb7abed4fb6dc75c7f1026fe745c9beb5cfac1dfc876dd161e4
+RAILS_LOG_TO_STDOUT=true
+RAILS_SERVE_STATIC_FILES=true
+```
+
+“In fact, there are lots of options when it comes to sharing your images, depending on your
+requirements. Docker Hub is only one of several hosted registries available. Other options include:
+
+
+Amazon Elastic Container Registry[105]Google Cloud Container Registry[106]Microsoft Azure Container Registry[107]Quay[108]”
