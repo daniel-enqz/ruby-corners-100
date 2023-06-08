@@ -24,7 +24,7 @@ _* By testing just the inputs and outputs, we can freely change the implementati
 - How to find the test thats causing the problem?
 ![Screenshot 2023-05-23 at 11 03 09](https://github.com/daniel-enqz/ruby-corners-100/assets/72522628/f489a859-b3b4-40eb-bb78-0f4be8b1e83d)
 
-1. Remember to use database to mantain clean states in each test
+1. Remember to use database cleaner to mantain clean states in each test
 2. Opt for explicit method calls to build and stub necessary objects and dependencies within the test itself. (Avoid let, before, subject)
 3. Extract helper methods.
 4. For feature specs, you may consider using Page Objects to clean up repetitive interactions.
