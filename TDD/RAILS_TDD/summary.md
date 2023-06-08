@@ -42,7 +42,9 @@ _* By testing just the inputs and outputs, we can freely change the implementati
 ```ruby
 module EnvHelper
   def with_env(variable, value)
-    old_value = ENV[variable] ENV[variable] = value yield
+    old_value = ENV[variable] 
+    ENV[variable] = value 
+    yield
   ensure
     ENV[variable] = old_value 
   end
